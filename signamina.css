@@ -167,10 +167,10 @@
 					content: "\e0c6"
 				}
 				u:nth-of-type(3):before {
-					content: "\f751"
+					content: "\f890"
 				}
 				u:nth-of-type(4):before {
-					content: "\e168"
+					content: "\f751"
 				}
 				u:nth-of-type(5):before {
 					content: "\f630"
@@ -303,6 +303,9 @@
 				u:nth-of-type(6):before {
 					content: "\e19b"
 				}
+				u:nth-of-type(6):before {
+					content: "\e168"
+				}
                 ul {
                     margin: 0;
                     padding: 0;
@@ -364,13 +367,13 @@
 			text-wrap: pretty;
 		}
 		.infos-posteur:nth-of-type(2)>span:not(.profil_label):after {
-			content: "• Validisme \a • Autisme";
+			content: "• Validisme \a • Autisme \a • Age gap (7 ans) \a • Rupture";
 			font-size: 13px;
 			white-space: pre;
 			text-wrap: pretty;
 		}
 		.infos-posteur:nth-of-type(5)>span:not(.profil_label):after {
-			content: "• FC: Deborah Ann Woll \a • Avatar: @fassylovergallery \a • Codes: @Maskaaribou";
+			content: "• FC: Deborah Ann Woll \a • Avatar: @showmeyouricons \a • Codes: @Maskaaribou";
 			font-size: 13px;
 			white-space: pre;
 			text-wrap: pretty;

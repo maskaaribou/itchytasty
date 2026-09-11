@@ -137,7 +137,7 @@
 					font-size: 13px;
 					text-transform: uppercase;
 				}
-				i {
+				u {
 					color: var(--italic2);
 					font-style: italic;
 					letter-spacing: 1px;
@@ -149,38 +149,38 @@
 					margin: 5px 0 0;
 					align-items: center;
 				}
-				i+br,
-				br:has(+i) {
+				u+br,
+				br:has(+u) {
 					display: none
 				}
-				i:before {
+				u:before {
 					font-style: normal;
 					font-family: "Font Awesome 7 Sharp";
 					font-weight: 100;
 					font-size: 11px
 				}
-				i:nth-of-type(1):before {
+				u:nth-of-type(1):before {
 					content: "\e5bd"
 				}
-				i:nth-of-type(2):before {
+				u:nth-of-type(2):before {
 					content: "\f256"
 				}
-				i:nth-of-type(3):before {
+				u:nth-of-type(3):before {
 					content: "\e664"
 				}
-				i:nth-of-type(4):before {
+				u:nth-of-type(4):before {
 					content: "\f5b7"
 				}
-				i:nth-of-type(5):before {
+				u:nth-of-type(5):before {
 					content: "\f2e6"
 				}
-				i:nth-of-type(6):before {
+				u:nth-of-type(6):before {
 					content: "\f21c"
 				}
-				i:nth-of-type(7):before {
+				u:nth-of-type(7):before {
 					content: "\e4f2"
 				}
-				i:nth-of-type(8):before {
+				u:nth-of-type(8):before {
 					content: "\f7a6"
 				}
 			}
@@ -268,7 +268,7 @@
 					font-size: 13px;
 					text-transform: uppercase;
 				}
-				i {
+				u {
 					color: var(--italic2);
 					font-style: italic;
 					letter-spacing: 1px;
@@ -280,38 +280,38 @@
 					margin: 5px 0 0;
 					align-items: center;
 				}
-				i+br,
-				br:has(+i) {
+				u+br,
+				br:has(+u) {
 					display: none
 				}
-				i:before {
+				u:before {
 					font-style: normal;
 					font-family: "Font Awesome 7 Sharp";
 					font-weight: 100;
 					font-size: 11px
 				}
-				i:nth-of-type(1):before {
+				u:nth-of-type(1):before {
 					content: "\f2c1"
 				}
-				i:nth-of-type(2):before {
+				u:nth-of-type(2):before {
 					content: "\f058"
 				}
-				i:nth-of-type(3):before {
+				u:nth-of-type(3):before {
 					content: "\f057"
 				}
-				i:nth-of-type(4):before {
+				u:nth-of-type(4):before {
 					content: "\e473"
 				}
-				i:nth-of-type(5):before {
+				u:nth-of-type(5):before {
 					content: "\e54e"
 				}
-				i:nth-of-type(6):before {
+				u:nth-of-type(6):before {
 					content: "\f4d7"
 				}
-				i:nth-of-type(7):before {
+				u:nth-of-type(7):before {
 					content: "\f54c"
 				}
-				i:nth-of-type(8):before {
+				u:nth-of-type(8):before {
 					content: "\f755"
 				}
 			}

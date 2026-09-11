@@ -379,7 +379,7 @@
 			text-wrap: pretty;
 		}
 		.infos-posteur:nth-of-type(2)>span:not(.profil_label):after {
-			content: "• Age-gap? (7 ans d'écart) \a • Contexte militaire / policier \a • Dépression \a • Deuil \a • Rupture";
+			content: "• Age gap (7 ans d'écart) \a • Contexte militaire / policier \a • Dépression \a • Deuil \a • Rupture";
 			font-size: 13px;
 			white-space: pre;
 			text-wrap: pretty;

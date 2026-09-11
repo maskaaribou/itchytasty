@@ -1,0 +1,318 @@
+@import url("https://kit-pro.fontawesome.com/releases/v7.3.1/css/pro.min.css");
+.post:has(.signamad) {
+	.contents {
+		text-wrap: pretty;
+	}
+	.selected.rpg {
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		overflow-x: hidden !important;
+		&:has(.spoiler_content: not([hidden])) {
+			overflow-y: hidden !important;
+		}
+		.infos-posteur {
+			padding: 0 5px;
+		}
+		.profil_label {
+			display: flex;
+			gap: 5px;
+			align-items: center;
+		}
+		.infos-posteur:first-of-type .profil_label,
+		.infos-posteur:nth-of-type(7) .profil_label {
+			display: none;
+		}
+		.profil_label:before {
+			font-style: normal;
+			font-family: "Font Awesome 7 Sharp";
+			font-weight: 100;
+			font-size: 11px
+		}
+		.infos-posteur:nth-of-type(1) {
+			margin: -320px 0 0;
+			img {
+				height: 95px;
+				object-fit: cover;
+				object-position: bottom;
+			}
+		}
+		/*ÂGE*/
+		.infos-posteur:nth-of-type(2) .profil_label:before {
+			content: "\f1fd"
+		}
+		/*JOB*/
+		.infos-posteur:nth-of-type(3) .profil_label:before {
+			content: "\f0b1"
+		}
+		/*SHIP*/
+		.infos-posteur:nth-of-type(4) .profil_label:before {
+			content: "\f21e"
+		}
+		/*GROUP*/
+		.infos-posteur:nth-of-type(5) .profil_label:before {
+			content: "\e6a1";
+		}
+		/*TRIVIA*/
+		.infos-posteur:nth-of-type(6) {
+			order: -1;
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			position: sticky;
+			top: 0;
+			height: 320px;
+			flex-shrink: 0;
+			overflow: hidden;
+			pointer-events: none;
+			background: var(--neutralDark);
+			z-index: 99;
+			&:has([hidden]) {
+				background: transparent;
+				z-index: 2
+			}
+			.profil_label {
+				display: none
+			}
+			.spoiler {
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				display: flex;
+				flex-direction: column-reverse;
+				gap: 5px;
+				height: 100%;
+				background: var(--neutral);
+			}
+			.spoiler:has([hidden]) {
+				background: transparent;
+			}
+			.spoiler_title {
+				all: unset;
+				font-size: 0;
+				pointer-events: auto;
+				width: 100%;
+			}
+			.spoiler_title:after {
+				content: "fermer";
+				cursor: pointer;
+				text-align: center;
+				font-size: 10px !important;
+				color: var(--textColor);
+				letter-spacing: 1px;
+				text-transform: uppercase !important;
+				padding: 2px;
+				background: var(--neutralDarker);
+				border-radius: 3px;
+				display: block;
+			}
+			.spoiler:has([hidden]) .spoiler_title {
+				width: calc(50% - 2px);
+			}
+			.spoiler:has([hidden]) .spoiler_title:after {
+				content: "trivia"
+			}
+			dd {
+				flex: 1;
+				overflow: auto;
+				height: 100%;
+				border-radius: 0;
+				padding: 0;
+			}
+			dd:has([hidden]) {
+				background: transparent;
+			}
+			.spoiler_content {
+				padding: 5px;
+				background: var(--neutral);
+				pointer-events: auto;
+				strong {
+					background: #7d423a;
+					color: white!important;
+					font-weight: 500;
+					padding: 1px 10px;
+					font-family: "Secular One", sans-serif;
+					border-radius: 5px;
+					font-size: 13px;
+					text-transform: uppercase;
+				}
+				i {
+					color: var(--italic2);
+					font-style: italic;
+					letter-spacing: 1px;
+					font-weight: 600;
+					border-bottom: 1px solid #7d423a;
+					text-transform: lowercase;
+					display: flex;
+					gap: 5px;
+					margin: 5px 0 0;
+					align-items: center;
+				}
+				i+br,
+				br:has(+i) {
+					display: none
+				}
+				i:before {
+					font-style: normal;
+					font-family: "Font Awesome 7 Sharp";
+					font-weight: 100;
+					font-size: 11px
+				}
+				i:nth-of-type(1):before {
+					content: "\e5bd"
+				}
+				i:nth-of-type(2):before {
+					content: "\f256"
+				}
+				i:nth-of-type(3):before {
+					content: "\e664"
+				}
+				i:nth-of-type(4):before {
+					content: "\f5b7"
+				}
+				i:nth-of-type(5):before {
+					content: "\f2e6"
+				}
+				i:nth-of-type(6):before {
+					content: "\f21c"
+				}
+				i:nth-of-type(7):before {
+					content: "\e4f2"
+				}
+				i:nth-of-type(8):before {
+					content: "\f7a6"
+				}
+			}
+		}
+		.infos-posteur:nth-of-type(7) {
+			order: -1;
+			margin: -320px 0 0;
+			padding: 0;
+			width: 100%;
+			position: sticky;
+			top: 0;
+			height: 320px;
+			flex-shrink: 0;
+			overflow: hidden;
+			pointer-events: none;
+			background: var(--neutralDark);
+			z-index: 99;
+			&:has([hidden]) {
+				background: transparent;
+				z-index: 2
+			}
+			.profil_label {
+				display: none
+			}
+			.spoiler {
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				display: flex;
+				flex-direction: column-reverse;
+				gap: 5px;
+				height: 100%;
+				background: var(--neutral);
+			}
+			.spoiler:has([hidden]) {
+				background: transparent;
+			}
+			.spoiler_title {
+				all: unset;
+				font-size: 0;
+				pointer-events: auto;
+				width: 100%;
+				margin: 0 0 0 auto;
+			}
+			.spoiler_title:after {
+				content: "fermer";
+				cursor: pointer;
+				text-align: center;
+				font-size: 10px !important;
+				color: var(--textColor);
+				letter-spacing: 1px;
+				text-transform: uppercase !important;
+				padding: 2px;
+				background: var(--neutralDarker);
+				border-radius: 3px;
+				display: block;
+			}
+			.spoiler:has([hidden]) .spoiler_title {
+				width: calc(50% - 2px);
+			}
+			.spoiler:has([hidden]) .spoiler_title:after {
+				content: "stats"
+			}
+			dd {
+				flex: 1;
+				overflow: auto;
+				height: 100%;
+				border-radius: 0;
+				padding: 0;
+			}
+			dd:has([hidden]) {
+				background: transparent;
+			}
+			.spoiler_content {
+				padding: 5px;
+				background: var(--neutral);
+				pointer-events: auto;
+				strong {
+					background: #7d423a;
+					color: white!important;
+					font-weight: 500;
+					padding: 1px 10px;
+					font-family: "Secular One", sans-serif;
+					border-radius: 5px;
+					font-size: 13px;
+					text-transform: uppercase;
+				}
+				i {
+					color: var(--italic2);
+					font-style: italic;
+					letter-spacing: 1px;
+					font-weight: 600;
+					border-bottom: 1px solid #7d423a;
+					text-transform: lowercase;
+					display: flex;
+					gap: 5px;
+					margin: 5px 0 0;
+					align-items: center;
+				}
+				i+br,
+				br:has(+i) {
+					display: none
+				}
+				i:before {
+					font-style: normal;
+					font-family: "Font Awesome 7 Sharp";
+					font-weight: 100;
+					font-size: 11px
+				}
+				i:nth-of-type(1):before {
+					content: "\f2c1"
+				}
+				i:nth-of-type(2):before {
+					content: "\f058"
+				}
+				i:nth-of-type(3):before {
+					content: "\f057"
+				}
+				i:nth-of-type(4):before {
+					content: "\e473"
+				}
+				i:nth-of-type(5):before {
+					content: "\e54e"
+				}
+				i:nth-of-type(6):before {
+					content: "\f4d7"
+				}
+				i:nth-of-type(7):before {
+					content: "\f54c"
+				}
+				i:nth-of-type(8):before {
+					content: "\f755"
+				}
+			}
+		}
+	}

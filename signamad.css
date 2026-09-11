@@ -8,7 +8,7 @@
 		display: flex;
 		flex-direction: column;
 		overflow-x: hidden !important;
-		&:has(.spoiler_content: not([hidden])) {
+		&:has(.spoiler_content:not([hidden])) {
 			overflow-y: hidden !important;
 		}
 		.infos-posteur {
@@ -148,6 +148,7 @@
 					gap: 5px;
 					margin: 5px 0 0;
 					align-items: center;
+					box-shadow: none
 				}
 				u+br,
 				br:has(+u) {
@@ -279,9 +280,12 @@
 					gap: 5px;
 					margin: 5px 0 0;
 					align-items: center;
+					box-shadow: none
 				}
 				u+br,
-				br:has(+u) {
+				br:has(+u),
+                ul+br,
+                ul br{
 					display: none
 				}
 				u:before {
@@ -314,6 +318,21 @@
 				u:nth-of-type(8):before {
 					content: "\f755"
 				}
+                ul {
+                    margin: 0;
+                    padding: 0;
+                }
+                ul li {
+                    display: flex;
+                    gap:4px;
+                    justify-content: space-between;
+                }
+                ul li:before {
+                    content:"• "
+                }
+                ul li i {
+                    flex:1;
+                }
 			}
 		}
 	}
@@ -322,7 +341,7 @@
 		display: flex;
 		flex-direction: column;
 		overflow-x: hidden !important;
-		&:has(.spoiler_content: not([hidden])) {
+		&:has(.spoiler_content:not([hidden])) {
 			overflow-y: hidden !important;
 		}
 		.infos-posteur {

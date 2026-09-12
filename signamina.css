@@ -376,7 +376,7 @@
 			text-wrap: pretty;
 		}
 		.infos-posteur:nth-of-type(5)>span:not(.profil_label):after {
-			content: "• FC: Deborah Ann Woll \a • Avatar: @showmeyouricons \a • Codes: @Maskaaribou";
+			content: "• FC: Deborah Ann Woll \a • Avatar: showmeyouricons \a • Codes: @Maskaaribou";
 			font-size: 13px;
 			white-space: pre;
 			text-wrap: pretty;

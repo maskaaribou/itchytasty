@@ -2,14 +2,6 @@
 .post:has(.signamina) {
     
     .post_rank {
-        text-align: center;
-        width: 100%;
-        display: block;
-        background: var(--neutral);
-        border-radius: 5px;
-        border: var(--border);
-        padding:5px 0 3px;
-        line-height: 100%;
         i2 {margin: 0;}
         soustf3 {margin: 0 0 0 3px}
         b2 {padding:1px 10px 0;line-height: 120%}

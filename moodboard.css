@@ -1,34 +1,45 @@
 .post:has(#codemad) li:has(.bx-quote-right-alt) {
-    display: none;
+	display: none;
 }
 
 .post.post_row:has(.signamad),
 #preview:has(.signamad),
 .post.post_row:has(.signamina),
 #preview:has(.signamina) {
-	
 	&:has(.moodboard) .signature_div {
 		display: none;
 	}
-    li:has(.bx-quote-right-alt) {
-        display: none!important;
-    }
-	.moodboard:after{
-	    content: "code par maskaaribou";
-	    display: block;
-	    font-size: 13px;
-	    font-variant: small-caps;
-	    text-align: center;
-	    width: 100%;
-	    color: var(--textColor);
-	    opacity: 0.5;
-	    grid-area: 6 / 1 / 7 / 5;
-        margin: -10px 0
+	li:has(.bx-quote-right-alt) {
+		display: none!important;
+	}
+	.moodboard:before {
+		content: "survolez pour en savoir plus";
+		display: block;
+		font-size: 15px;
+		font-variant: small-caps;
+		text-align: center;
+		width: 100%;
+		color: var(--textColor);
+		opacity: 0.5;
+		grid-area: 1 / 1 / 2 / 5;
+		margin: -10px 0
+	}
+	.moodboard:after {
+		content: "code par maskaaribou";
+		display: block;
+		font-size: 13px;
+		font-variant: small-caps;
+		text-align: center;
+		width: 100%;
+		color: var(--textColor);
+		opacity: 0.5;
+		grid-area: 7 / 1 / 8 / 5;
+		margin: -10px 0
 	}
 	.moodboard {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
-		grid-template-rows: repeat(5, 1fr);
+		grid-template-rows: auto repeat(5, 1fr) auto;
 		width: 100%;
 		gap: 10px;
 		margin: auto;
@@ -40,9 +51,26 @@
 		aspect-ratio: 1;
 	}
 	.moodboard>img:nth-of-type(6) {
-		grid-column: 2 / 4;
-		grid-row: 2 / 5;
+		grid-area: 3 / 2 / 6 / 4;
 		height: 100%;
 		width: 100%;
+	}
+	.moodboard img+div {
+		grid-area: 3 / 2 / 6 / 4;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		pointer-events: none;
+		opacity: 0;
+		gap: 10px;
+		transition: 200ms all;
+		z-index: 9;
+		background: var(--neutral)
+	}
+	.moodboard img:hover+div {
+		opacity: 1;
 	}
 }

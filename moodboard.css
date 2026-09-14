@@ -1,7 +1,12 @@
+.post:has(#codemad) li:has(.bx-quote-right-alt) {
+    display: none;
+}
+
 .post.post_row:has(.signamad),
 #preview:has(.signamad),
 .post.post_row:has(.signamina),
 #preview:has(.signamina) {
+	
 	&:has(.moodboard) .signature_div {
 		display: none;
 	}

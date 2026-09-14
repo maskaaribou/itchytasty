@@ -1,17 +1,27 @@
 @import url("https://kit-pro.fontawesome.com/releases/v7.3.1/css/pro.min.css");
 .post:has(.signamad),
 #preview:has(.signamad){
+    
+    .post_message {
+        display: flex;
+        flex-direction: column;
+        background:var(--neutralDark);
+        padding: 0 0 20px;
+    }
 
 	.signature_div br {display: none;}
 
 	div:has(+.signature_div) {
-        min-height:calc(100% - 340px);
+        flex:1;
+        position: relative;
+        border-radius: 5px;
+        background:var(--neutral)
     }
     
     .signature_div {
         width: 100%;
         background:var(--neutralDark);
-        padding: 10px 0 21px;
+        padding: 10px 0 0px;
         overflow: hidden;
     }
     .signamad {

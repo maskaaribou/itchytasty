@@ -2,6 +2,10 @@
     display: none;
 }
 
+.post:has(.lastpostmad)+.post {
+    display: none;
+}
+
 .post:has(#codemad) .signature_div {display:none}
 
 #timeline .filter-buttons {

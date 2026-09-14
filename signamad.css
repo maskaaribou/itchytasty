@@ -25,13 +25,13 @@
 		border-radius: 5px;
 	}
     .signamad img {
-        content:url(https://64.media.tumblr.com/8b5b816d0bc011f8a2b11c551e8e174b/tumblr_p094us1tal1uadmjro2_540.gif);
+        content:url(https://i.imgur.com/FlYBh8f.gif);
 		width: 100%;
 		height: 150px;
 		object-fit: cover;
-		object-position: 0 70%;
+		object-position: 0 28%;
 		border-radius: 5px;
-		filter: grayscale(1) contrast(115%);
+		filter: saturate(0.2) contrast(115%) brightness(1.3);
 	}
 	
 	.post_rank {

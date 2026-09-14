@@ -6,9 +6,7 @@
 #preview:has(.signamad),
 .post.post_row:has(.signamina),
 #preview:has(.signamina) {
-	&:has(.moodboard) .signature_div {
-		display: none;
-	}
+	
 	li:has(.bx-quote-right-alt) {
 		display: none!important;
 	}
@@ -43,6 +41,9 @@
 		width: 100%;
 		gap: 10px;
 		margin: auto;
+        padding: 10px;
+        border-radius: 5px;
+        background:var(--neutralDark);
 	}
 	.moodboard>img {
 		width: 100%;

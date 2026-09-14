@@ -1,0 +1,187 @@
+#timeline .filter-buttons {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 0 10px;
+}
+
+#timeline .filter-buttons input {
+	display: none;
+}
+
+#timeline .filter-buttons label {
+	background: var(--neutralDark);
+	border-radius: 5px;
+	text-transform: uppercase !important;
+	font-size: 10px !important;
+	color: var(--textColor);
+	padding: 5px 5px 5px 10px;
+	letter-spacing: 5px;
+	cursor: pointer;
+	text-align: center;
+	opacity: 0.5;
+	transition: 200ms all;
+}
+
+#timeline .filter-buttons input:checked+label,
+#timeline .filter-buttons label:hover {
+	opacity: 1
+}
+
+#timeline h {
+	display: block;
+	position: relative;
+	border-bottom: 10px solid var(--neutralDark);
+	border-radius: 5px;
+}
+
+#timeline h ln {
+	width: 3px;
+	height: calc(100% - 10px);
+	background: #7d423a;
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 33.5px;
+	z-index: 1;
+}
+
+#timeline .chrono {
+	background: var(--neutralDark);
+	padding: 0 10px;
+	box-sizing: border-box;
+	color: var(--textColor);
+	display: flex;
+	position: relative;
+	height: 700px;
+	overflow: auto;
+	align-items: flex-start;
+}
+
+#timeline .chrono lst {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+#timeline:has(input[id="tout"]:checked) h .chrono lst div,
+#timeline h .chrono lst div:has(a) {
+	display: block;
+}
+
+#timeline h .chrono lst div {
+	display: none;
+}
+
+#timeline:has(input[id="croissant"]:checked) h .chrono lst,
+#timeline:has(input[id="croissant"]:checked) h .chrono lst k {
+	flex-direction: column-reverse;
+}
+
+#timeline .chrono titre {
+	position: sticky;
+	top: 0;
+	z-index: 3;
+	margin: ;
+	color: #7d423a;
+	background: var(--neutralDark);
+	line-height: normal;
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 5px 0 5px 0;
+	display: block;
+}
+
+#timeline .chrono lst k {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+#timeline .chrono x {
+	display: none;
+	justify-content: space-between;
+	align-items: stretch;
+	background: var(--neutral);
+	border-radius: 5px;
+}
+
+#timeline .chrono x:has(a),
+#timeline:has(input[id="tout"]:checked) h .chrono x {
+	display: flex;
+}
+
+#timeline .chrono x m {
+	width: 50px;
+	z-index: 2;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+}
+
+#timeline .chrono x m y {
+	height: 20px;
+	width: 20px;
+	background: var(--textColor);
+	display: block;
+	border-radius: 100%;
+}
+
+#timeline .chrono x:has(a) m y {
+	background: #7d423a;
+	border: 3px solid var(--textColor);
+}
+
+#timeline .chrono x r {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	text-align: justify;
+	padding: 10px 15px 10px 0;
+	gap: 10px;
+}
+
+#timeline .chrono w {
+	display: block;
+	width: 100px;
+	object-fit: cover;
+	background-size: cover;
+	background-position: center;
+	border-radius: 0 5px 5px 0;
+}
+
+#timeline .chrono l {
+	color: var(--italic2);
+	font-style: italic;
+	letter-spacing: 1px;
+	font-weight: 600;
+	font-size: 14px
+}
+
+#timeline .chrono l>a {
+	color: var(--italic2);
+	font-style: italic;
+	letter-spacing: 1px;
+	font-weight: 600;
+	border-bottom: 1px solid #7d423a;
+	font-size: 17px
+}
+
+#timeline .chrono x r ft {
+	display: block;
+	font-size: 11px;
+	margin: 2px 0 0;
+	;
+}
+
+center:has(#timeline):after {
+	content: "code par maskaaribou";
+	display: block;
+	font-size: 12px;
+	font-variant: small-caps;
+	text-align: center;
+	width: 100%;
+	opacity: 0.5;
+}

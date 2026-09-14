@@ -1,3 +1,11 @@
+.post:has(.signamad),
+.post:has(.signamina){
+
+    &:has(#codemad) li:has(.bx-quote-right-alt) {
+        display: none;
+    }
+}
+
 #timeline .filter-buttons {
 	display: flex;
 	justify-content: space-between;

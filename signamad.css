@@ -43,6 +43,7 @@
         border: var(--border);
         padding: 3px;
         i2 {margin: 0;}
+        soustf3 {margin: 0 0 0 3px}
         b2 {
             display: inline-flex;
             height:21px;

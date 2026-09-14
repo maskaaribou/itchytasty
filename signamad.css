@@ -1,6 +1,9 @@
 @import url("https://kit-pro.fontawesome.com/releases/v7.3.1/css/pro.min.css");
-.post:has(.signamad),
-#preview:has(.signamad){
+#preview:has(.signamad) {
+	.signature_div {display:none}
+}
+
+.post:has(.signamad){
     
     .post_message {
         display: flex;

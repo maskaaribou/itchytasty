@@ -36,7 +36,7 @@
 
 #timeline h ln {
 	width: 3px;
-	height: calc(100% - 10px);
+	height: 100%;
 	background: #7d423a;
 	display: block;
 	position: absolute;

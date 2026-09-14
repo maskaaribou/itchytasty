@@ -1,5 +1,6 @@
 @import url("https://kit-pro.fontawesome.com/releases/v7.3.1/css/pro.min.css");
-.post:has(.signamad) {
+.post:has(.signamad),
+#preview:has(.signamad){
 
 	.signature_div br {display: none;}
 

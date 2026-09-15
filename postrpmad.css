@@ -9,8 +9,8 @@
 	}
 	.postrpmad.rox,
 	.postrpmad.roxanne {
-		--light: #99adcf;
-		--color: #c6ac8a;
+		--light: #c6ac8a;
+		--color: #99adcf;
 	}
 	.postrpmad {
 		background: var(--neutralDark);

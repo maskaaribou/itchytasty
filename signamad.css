@@ -6,6 +6,9 @@
 }
 
 .post:has(.signamad) {
+	.cadrepseudop {
+		z-index:4
+	}
 	.post_message {
 		display: flex;
 		flex-direction: column;

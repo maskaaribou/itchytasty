@@ -150,8 +150,9 @@
 		font-style: italic;
 		height: 100%;
 	}
-	.postrpmad t qt x b{
-	    color:var(--light);
+	.postrpmad t qt x b,
+	.postrpmad t qt x strong{
+	    color:var(--light)!important;
 	}
 	
 	.postrpmad t qt x:before {

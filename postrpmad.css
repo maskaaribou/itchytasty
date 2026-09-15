@@ -4,8 +4,8 @@
 .post.post_row:has(.signamina),
 #preview:has(.signamina) {
 	.postrpmad.david {
-		--light: #BD716B;
-		--color: #844D63;
+		--light: #844D63;
+		--color: #BD716B;
 	}
 	.postrpmad.rox,
 	.postrpmad.roxanne {

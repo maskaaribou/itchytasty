@@ -55,7 +55,6 @@
 		gap: 10px;
 		line-height: 100%;
 		border-radius: 5px;
-		border: var(--border);
 	}
 	.postrpmad t l {
 		display: flex;
@@ -83,9 +82,7 @@
 	.postrpmad t ti {
 		font-size: 45px;
 		text-transform: uppercase;
-		color: transparent !important;
 		font-family: "Special Elite";
-		-webkit-text-stroke: 0.5px var(--textColor);
 		font-weight: 200;
 		display: flex;
 		gap: 7px;
@@ -179,7 +176,6 @@
 	.postrpmad rp {
 		display: block;
 		background: var(--neutral);
-		border: var(--border);
 		border-radius: 5px;
 		padding: 30px;
 		font-family: "Playfair Display";
@@ -232,7 +228,6 @@
 		gap: 3px;
 		justify-content: center;
 		align-items: center;
-		border: var(--border);
 		font-family: "Playfair Display";
 	}
 	.postrpmad info lieu:before,
@@ -278,7 +273,6 @@
 		gap: 10px;
 		line-height: 100%;
 		border-radius: 5px;
-		border: var(--border);
 		align-items: center;
 	}
 	.postrpmad bt hrp {

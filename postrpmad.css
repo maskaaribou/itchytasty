@@ -9,8 +9,8 @@
 	}
 	.postrpmad.rox,
 	.postrpmad.roxanne {
-		--light: #b99f7f;
-		--color: #76474E;
+		--light: #99adcf;
+		--color: #c6ac8a;
 	}
 	.postrpmad {
 		background: var(--neutralDark);
@@ -111,13 +111,13 @@
 		width: max-content;
 		padding: 10px 10px 11px;
 		border-radius: 5px;
+		text-shadow: 0 0 0;
 	}
 	.postrpmad rp tt:before {
 		content: "TWs :";
 		text-transform: uppercase;
 		font-size: 17px;
 		letter-spacing: 2px;
-		text-shadow: 0 0 2px;
 	}
 	.postrpmad rp tt x {
 		background: var(--light);
@@ -177,6 +177,8 @@
 		border-radius: 5px;
 		padding: 30px;
 		font-family: "Playfair Display";
+		font-size:15px;
+		text-shadow: 1px 1px 0px var(--neutralDark);
 	}
 	.postrpmad rp b,
 	.postrpmad rp strong {
@@ -188,26 +190,34 @@
 	.postrpmad rp strike {
 		text-decoration-color: var(--light)
 	}
-	.postrpmad rp d {
+	.postrpmad rp d,
+	.postrpmad rp r {
 		font-weight: bold;
 		letter-spacing: 1px;
 		color: var(--color);
 	}
-	.postrpmad rp d:has(en):hover {
+	.postrpmad rp d:has(en):hover,
+	.postrpmad rp r:has(en):hover {
 		cursor: help;
 	}
-	.postrpmad rp d:before {
+	.postrpmad rp d:before,
+	.postrpmad rp r:before {
 		content: "« "
 	}
-	.postrpmad rp d:after {
+	.postrpmad rp d:after,
+	.postrpmad rp r:after {
 		content: " »"
 	}
 	.postrpmad rp d en,
-	.postrpmad rp d:hover fr {
+	.postrpmad rp r en,
+	.postrpmad rp d:hover fr,
+	.postrpmad rp r:hover fr {
 		display: inline;
 	}
 	.postrpmad rp d fr,
-	.postrpmad rp d:hover en {
+	.postrpmad rp r fr,
+	.postrpmad rp d:hover en,
+	.postrpmad rp r:hover en {
 		display: none;
 	}
 	.postrpmad info {

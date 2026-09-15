@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Special+Elite&display=swap');
+.post.post_row:has(.signamad),
+#preview:has(.signamad),
+.post.post_row:has(.signamina),
+#preview:has(.signamina) {
+	.postrpmad.david {
+		--light: #b99f7f;
+		--color: #76474E;
+		--dark: #251e1f;
+	}
+	.postrpmad.rox,
+	.postrpmad.roxanne {
+		--light: #b99f7f;
+		--color: #76474E;
+		--dark: #251e1f;
+	}
+	.postrpmad {
+		background: var(--neutralDark);
+		padding: 10px;
+		border-radius: 5px;
+		text-align: justify;
+		margin: auto;
+		max-width: 580px;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		font-family: "Imbue";
+		position: relative;
+	}
+	.postrpmad:after {
+		content: "code par maskaaribou";
+		position: absolute;
+		bottom: -15px;
+		width: 100%;
+		text-align: center;
+		font-weight: 400;
+		font-style: normal;
+		text-transform: uppercase;
+		font-size: 10px;
+		text-shadow: 0 0 2px;
+		font-family: var(--font);
+		opacity: 0.3;
+		color: var(--textColor);
+	}
+    .postrpmad::selection {
+        background:var(--color);
+        color:black;
+    }
+	.postrpmad t {
+		background: var(--neutral);
+		display: flex;
+		width: 100%;
+		padding: 10px;
+		min-height: 100px;
+		gap: 10px;
+		line-height: 100%;
+		border-radius: 5px;
+		border: var(--border);
+	}
+	.postrpmad t l {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		gap: 10px;
+	}
+	.postrpmad t l ttt {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+	}
+	.postrpmad t l ttt:first-child {
+		justify-content: center;
+		margin: 10px 0 -10px;
+		filter: drop-shadow(4px 4px 0 var(--neutralDarker));
+		flex-wrap: wrap;
+		align-items: center;
+	}
+	.postrpmad t l ln {
+		display: block;
+		background: linear-gradient(90deg, var(--color) 0%, transparent 95%);
+		height: 3px;
+	}
+	.postrpmad t ti {
+		font-size: 45px;
+		text-transform: uppercase;
+		color: transparent !important;
+		font-family: "Special Elite";
+		-webkit-text-stroke: 0.5px var(--textColor);
+		font-weight: 200;
+		display: flex;
+		gap: 7px;
+		line-height: 100%;
+	}
+	.postrpmad t ti strong,
+	.postrpmad t ti b {
+		color: var(--color)!important;
+	}
+	.postrpmad t st {
+		font-weight: 400;
+		font-style: normal;
+		text-transform: uppercase;
+		font-size: 16px;
+		letter-spacing: 2px;
+		text-shadow: 0 0 2px;
+		line-height: 100%;
+		font-family: "Special Elite";
+	}
+	.postrpmad rp tt {
+		all: unset;
+		display: flex;
+		gap: 10px;
+		align-items: center;
+		margin: -20px -20px -5px auto;
+		justify-content: end;
+		background: var(--neutralDark);
+		width: max-content;
+		padding: 10px 10px 11px;
+		border-radius: 5px;
+	}
+	.postrpmad rp tt:before {
+		content: "TWs :";
+		text-transform: uppercase;
+		font-size: 17px;
+		letter-spacing: 2px;
+		text-shadow: 0 0 2px;
+	}
+	.postrpmad rp tt x {
+		background: var(--light);
+		color: var(--light);
+		padding: 1px 5px 1px;
+		font-family: "Playfair Display";
+		font-weight: 800;
+		letter-spacing: 1px;
+		border-radius: 5px;
+		font-size: 12px;
+		text-transform: uppercase;
+		transition: 200ms all;
+	}
+	.postrpmad rp tt:hover x {
+		color: black;
+		cursor: help;
+	}
+	.postrpmad t qt {
+		display: flex;
+		background: var(--neutralDark);
+		border-radius: 5px;
+		border-left: 5px solid var(--color);
+		padding: 15px;
+		justify-content: center;
+		align-items: center;
+		font-size: 13px;
+		letter-spacing: 1px;
+		text-shadow: 0 0 2px;
+		line-height: 130%;
+		font-family: "Playfair Display";
+		font-style: italic;
+		height: 100%;
+	}
+	.postrpmad t r {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+	.postrpmad t r pic {
+		display: flex;
+		border-radius: 5px;
+		flex: 1;
+		min-height: 115px;
+		width: 200px;
+		background-size: cover;
+		background-position: center;
+		border: 5px solid var(--neutralDark)
+	}
+	.postrpmad ln {
+		display: none!important;
+		background: linear-gradient(90deg, transparent 0%, var(--color) 50%, transparent 100%);
+		height: 1px;
+	}
+	.postrpmad rp {
+		display: block;
+		background: var(--neutral);
+		border: var(--border);
+		border-radius: 5px;
+		padding: 30px;
+		font-family: "Playfair Display";
+	}
+	.postrpmad rp b,
+	.postrpmad rp strong {
+		color: var(--light)!important;
+	}
+	.postrpmad rp u {
+		box-shadow: inset 0 -1px 0 var(--light);
+	}
+	.postrpmad rp strike {
+		text-decoration-color: var(--light)
+	}
+	.postrpmad rp d {
+		font-weight: bold;
+		letter-spacing: 1px;
+		color: var(--color);
+	}
+	.postrpmad rp d:has(en):hover {
+		cursor: help;
+	}
+	.postrpmad rp d:before {
+		content: "« "
+	}
+	.postrpmad rp d:after {
+		content: " »"
+	}
+	.postrpmad rp d en,
+	.postrpmad rp d:hover fr {
+		display: inline;
+	}
+	.postrpmad rp d fr,
+	.postrpmad rp d:hover en {
+		display: none;
+	}
+	.postrpmad info {
+		display: flex;
+		gap: 10px;
+	}
+	.postrpmad info lieu,
+	.postrpmad info date,
+	.postrpmad info ft {
+		background: var(--neutral);
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		border-radius: 5px;
+		padding: 10px;
+		gap: 3px;
+		justify-content: center;
+		align-items: center;
+		border: var(--border);
+		font-family: "Playfair Display";
+	}
+	.postrpmad info lieu:before,
+	.postrpmad info date:before,
+	.postrpmad info ft:before {
+		content: "Lieu :";
+		text-transform: uppercase;
+		font-size: 17px;
+		letter-spacing: 2px;
+		text-shadow: 0 0 2px;
+		border-bottom: 1px solid var(--light);
+		padding: 0 0 3px;
+		display: block;
+		width: 100%;
+		text-align: center;
+		font-family: "Imbue";
+	}
+	.postrpmad info date:before {
+		content: "Date :"
+	}
+	.postrpmad info ft:before {
+		content: "Feat :"
+	}
+	.postrpmad info lieu x,
+	.postrpmad info date x,
+	.postrpmad info ft x {
+		background: var(--neutralDark);
+		display: flex;
+		padding: 5px 5px 7px;
+		margin: 1px 0 0;
+		width: 100%;
+		height: 100%;
+		border-radius: 5px;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+	.postrpmad bt {
+		background: var(--neutral);
+		display: flex;
+		width: 100%;
+		padding: 10px;
+		gap: 10px;
+		line-height: 100%;
+		border-radius: 5px;
+		border: var(--border);
+		align-items: center;
+	}
+	.postrpmad bt hrp {
+		display: flex;
+		background: var(--neutralDark);
+		border-radius: 5px;
+		border-right: 5px solid var(--color);
+		padding: 15px;
+		font-size: 13px;
+		letter-spacing: 1px;
+		text-shadow: 0 0 2px;
+		line-height: 130%;
+		font-family: "Playfair Display";
+		font-style: italic;
+		height: 100%;
+		width: 100%;
+	}
+	.postrpmad bt hrp:before {
+		content: "HRP :";
+		text-transform: uppercase;
+		font-size: 17px;
+		letter-spacing: 2px;
+		text-shadow: 0 0 2px;
+		text-align: center;
+		font-family: "Imbue";
+		text-wrap: nowrap;
+		font-style: normal;
+		margin: 0 6px 0 0;
+		display: inline;
+	}
+}

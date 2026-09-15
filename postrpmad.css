@@ -145,11 +145,22 @@
 		align-items: center;
 		font-size: 13px;
 		letter-spacing: 1px;
-		text-shadow: 0 0 2px;
 		line-height: 130%;
 		font-family: "Playfair Display";
 		font-style: italic;
 		height: 100%;
+	}
+	.postrpmad t qt x {
+	    color:var(--light);
+	}
+	
+	.postrpmad t qt x:before {
+	    content:"« ";
+	    font-size: 15px;
+	}
+	.postrpmad t qt x:after {
+	    content:" »";
+	    font-size: 15px;
 	}
 	.postrpmad t r {
 		display: flex;

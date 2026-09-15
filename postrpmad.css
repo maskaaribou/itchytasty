@@ -116,8 +116,9 @@
 	.postrpmad rp tt:before {
 		content: "TWs :";
 		text-transform: uppercase;
-		font-size: 17px;
+		font-size: 18px;
 		letter-spacing: 2px;
+        line-height: 100%;
 	}
 	.postrpmad rp tt x {
 		background: var(--light);

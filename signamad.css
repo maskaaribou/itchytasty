@@ -9,7 +9,7 @@
 	.post_message {
 		display: flex;
 		flex-direction: column;
-		background: var(--neutralDark);
+		background: var(--neutralDarker);
 		padding: 0 0 20px;
 	}
 	.signature_div br {
@@ -23,7 +23,7 @@
 	}
 	.signature_div {
 		width: 100%;
-		background: var(--neutralDark);
+		background: var(--neutralDarker);
 		padding: 10px 0 0px;
 		overflow: hidden;
 	}
@@ -34,7 +34,7 @@
 		flex-direction: column;
 		gap: 10px;
 		padding: 0;
-		background: var(--neutralDark);
+		background: var(--neutralDarker);
 		border-radius: 5px;
 	}
 	.signamad img {
@@ -182,7 +182,7 @@
 				background: transparent;
 			}
 			.spoiler_content {
-				padding: 0;
+				padding: 0 5px 0 0;
 				background: var(--neutral);
 				pointer-events: auto;
 				strong {
@@ -339,7 +339,7 @@
 				background: transparent;
 			}
 			.spoiler_content {
-				padding: 0;
+				padding: 0 5px 0 0;
 				background: var(--neutral);
 				pointer-events: auto;
 				strong {
@@ -490,7 +490,7 @@
 			}
             
 			.spoiler_content {
-				padding: 0;
+				padding: 0 5px 0 0;
 				background: var(--neutral);
 				pointer-events: auto;
 				strong {

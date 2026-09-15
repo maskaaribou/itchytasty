@@ -47,7 +47,7 @@
 #timeline h ln {
 	width: 3px;
 	height: 100%;
-	background: #7d423a;
+	background: var(--accentClr);
 	display: block;
 	position: absolute;
 	top: 0px;
@@ -92,7 +92,7 @@
 	top: 0;
 	z-index: 3;
 	margin: ;
-	color: #7d423a;
+	color: var(--bold);
 	background: var(--neutralDark);
 	line-height: normal;
 	font-size: 16px;
@@ -139,7 +139,7 @@
 }
 
 #timeline .chrono x:has(a) m y {
-	background: #7d423a;
+	background: var(--bold);
 	border: 3px solid var(--textColor);
 }
 
@@ -175,7 +175,7 @@
 	font-style: italic;
 	letter-spacing: 1px;
 	font-weight: 600;
-	border-bottom: 1px solid #7d423a;
+	border-bottom: 2px solid var(--accentClr);
 	font-size: 17px
 }
 

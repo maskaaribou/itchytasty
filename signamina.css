@@ -1,1 +1,500 @@
+@import url("https://kit-pro.fontawesome.com/releases/v7.3.1/css/pro.min.css");
+.post:has(.signamina) {
+    .post_rank {
+        i2 {margin: 0;}
+        soustf3 {margin: 0 0 0 3px}
+        b2 {padding:1px 10px 0;line-height: 120%}
+    }
 
+	.signature_div {display:none}
+	
+	.contents {
+		text-wrap: pretty;
+	}
+	.selected.rpg {
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		overflow-x: hidden !important;
+		&:has(.spoiler_content:not([hidden])) {
+			overflow-y: hidden !important;
+		}
+		.infos-posteur {
+			padding: 0 0 0 0;
+		}
+		.profil_label {
+			display: flex;
+			align-items: center;
+            margin: -9px 0 -5px;
+		}
+		/*STATS*/
+		.infos-posteur:nth-of-type(1) {
+			order: 2;
+			margin: -320px 0 0;
+			padding: 0;
+			width: 100%;
+			position: sticky;
+			top: 0;
+			height: 320px;
+			flex-shrink: 0;
+			overflow: hidden;
+			pointer-events: none;
+			background: var(--neutralDark);
+			z-index: 99;
+			&:has([hidden]) {
+				background: transparent;
+				z-index: 2
+			}
+			.profil_label {
+				display: none
+			}
+            .spoiler {
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				display: flex;
+				flex-direction: column-reverse;
+				gap: 5px;
+				height: 100%;
+				background: var(--neutral);
+			}
+			.spoiler:has([hidden]) {
+				background: transparent;
+			}
+			.spoiler_title {
+				all: unset;
+				font-size: 0;
+				pointer-events: auto;
+                display: flex;
+			}
+            .spoiler:has([hidden]) .spoiler_title {
+                margin: 0 0 0 auto;
+            }
+			.spoiler_title:after {
+				content: "fermer";
+				cursor: pointer;
+				text-align: center;
+				font-size: 10px !important;
+				color: var(--textColor);
+				letter-spacing: 1px;
+				text-transform: uppercase !important;
+				padding: 2px;
+				background: var(--neutralDarker);
+				border-radius: 3px;
+                flex:1;
+			}
+			.spoiler:has([hidden]) .spoiler_title {
+				width: calc(50% - 1px);
+			}
+			.spoiler:has([hidden]) .spoiler_title:after {
+				content: "aptitudes"
+			}
+			dd {
+				flex: 1;
+				overflow: auto;
+				height: 100%;
+				border-radius: 0;
+				padding: 0;
+			}
+			dd:has([hidden]) {
+				background: transparent;
+			}
+			.spoiler_content {
+				padding: 0 5px 0 0;
+				background: var(--neutral);
+				pointer-events: auto;
+                height:100%;
+				strong {
+					font-weight: 600;
+                    font-size: 13px;
+                    text-transform: uppercase;
+                    color: var(--accentClrDark);
+                    font-family: 'Rakkas';
+                    letter-spacing: 1px;
+                    margin: 0 0 -20px;
+                    display: block;
+				}
+				u {
+					color: var(--italic2);
+					font-weight: 600;
+					display: flex;
+					gap: 5px;
+					align-items: center;
+					box-shadow: none;
+                    text-transform: uppercase;
+                    font-family: 'Geist Mono';
+                    font-size: 9px;
+                    text-decoration: none;
+                    margin: 2px 0 -5px;
+                }
+				u+br,
+				br:has(+u),
+                ul+br,
+                ul br {
+					display: none
+				}
+                ul {
+                    margin: 5px 0 0;
+                    padding: 0;
+                }
+                ul li {
+                    display: flex;
+                    gap:4px;
+                    justify-content: space-between;
+                }
+                ul li:before {
+                    content:"• "
+                }
+                ul li i {
+                    flex:1;
+                }
+			}
+		}
+		/*ÂGE*/
+		.infos-posteur:nth-of-type(2) {
+			order: 4;
+		}
+		/*OCCUPATION*/
+		.infos-posteur:nth-of-type(3) {
+			order: 5;
+		}
+		/*SHIP*/
+		.infos-posteur:nth-of-type(4) {
+			order: 6;
+		}
+		/*PIC*/
+		.infos-posteur:nth-of-type(6) {
+			order: 3;
+            margin: -315px 0 0;
+			img {
+				width: 100%;
+				height: 130px;
+				object-fit: cover;
+				object-position: bottom;
+			}
+		}
+		/*GROUPE*/
+		.infos-posteur:nth-of-type(7) {
+			order: 7;
+		}
+		/*CLASSE*/
+		.infos-posteur:nth-of-type(8) {
+			order: 8;
+		}
+		/*TRIVIA*/
+		.infos-posteur:nth-of-type(5) {
+			order: 1;
+            margin: 0;
+			padding: 0;
+			width: 100%;
+			position: sticky;
+			top: 0;
+			height: 320px;
+			flex-shrink: 0;
+			overflow: hidden;
+			pointer-events: none;
+			background: var(--neutralDark);
+			z-index: 99;
+			&:has([hidden]) {
+				background: transparent;
+				z-index: 2
+			}
+			.profil_label {
+				display: none
+			}
+			.spoiler {
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				display: flex;
+				flex-direction: column-reverse;
+				gap: 5px;
+				height: 100%;
+				background: var(--neutral);
+			}
+			.spoiler:has([hidden]) {
+				background: transparent;
+			}
+			.spoiler_title {
+				all: unset;
+				font-size: 0;
+				pointer-events: auto;
+                display: flex;
+			}
+			.spoiler_title:after {
+				content: "fermer";
+				cursor: pointer;
+				text-align: center;
+				font-size: 10px !important;
+				color: var(--textColor);
+				letter-spacing: 1px;
+				text-transform: uppercase !important;
+				padding: 2px;
+				background: var(--neutralDarker);
+				border-radius: 3px;
+                flex:1;
+			}
+			.spoiler:has([hidden]) .spoiler_title {
+				width: calc(50% - 1px);
+			}
+			.spoiler:has([hidden]) .spoiler_title:after {
+				content: "trivia"
+			}
+			dd {
+				flex: 1;
+				overflow: auto;
+				height: 100%;
+				border-radius: 0;
+				padding: 0;
+			}
+			dd:has([hidden]) {
+				background: transparent;
+			}
+			.spoiler_content {
+				padding: 0 5px 0 0;
+				background: var(--neutral);
+				pointer-events: auto;
+				strong {
+					font-weight: 600;
+                    font-size: 13px;
+                    text-transform: uppercase;
+                    color: var(--accentClrDark);
+                    font-family: 'Rakkas';
+                    letter-spacing: 1px;
+                    margin: 0 0 -20px;
+                    display: block;
+				}
+				u {
+					color: var(--italic2);
+					font-weight: 600;
+					display: flex;
+					gap: 5px;
+					align-items: center;
+					box-shadow: none;
+                    text-transform: uppercase;
+                    font-family: 'Geist Mono';
+                    font-size: 9px;
+                    text-decoration: none;
+                    margin: 2px 0 -5px;
+                }
+				u+br,
+				br:has(+u) {
+					display: none
+				}
+			}
+		}
+	}
+    
+	.selected.other {
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		overflow-x: hidden !important;
+		&:has(.spoiler_content:not([hidden])) {
+			overflow-y: hidden !important;
+		}
+		.infos-posteur {
+			padding: 0 5px 0 0;
+		}
+		.profil_label {
+			display: flex;
+			align-items: center;
+            margin: -9px 0 -5px;
+		}
+        .infos-posteur:nth-of-type(2),
+        .infos-posteur:nth-of-type(3),
+        .infos-posteur:nth-of-type(6) {
+            margin-bottom:0px;
+        }
+		.infos-posteur:nth-of-type(2)>span:not(.profil_label),
+		.infos-posteur:nth-of-type(3)>span:not(.profil_label),
+		.infos-posteur:nth-of-type(6)>span:not(.profil_label) {
+			font-size: 0;
+		}
+		.infos-posteur:nth-of-type(1) {
+			margin: -315px 0 5px;
+		}
+		.infos-posteur:nth-of-type(2)>span:not(.profil_label):after {
+			content: "• Self-harm \a • Suicide \a • Araignées \a • Validisme \a • Maltraitance Animale";
+			font-size: 13px;
+			white-space: pre-wrap;
+            display: inline-block;
+		}
+        .infos-posteur:nth-of-type(3)>span:not(.profil_label):after {
+			content: "• Validisme \a • Autisme \a • Age gap (7 ans) \a • Rupture";
+			font-size: 13px;
+			white-space: pre-wrap;
+            display: inline-block;
+		}
+        .infos-posteur:nth-of-type(6)>span:not(.profil_label):after {
+			content: "• FC: Deborah Ann Woll \a • Avatar: showmeyouricons \a • Codes: @Maskaaribou";
+			font-size: 13px;
+			white-space: pre-wrap;
+            display: inline-block;
+		}
+		.infos-posteur:nth-of-type(7) {
+			margin: 5px 0 25px
+		}
+        /*PARTIE RP*/
+        .infos-posteur:nth-of-type(8) {
+            order: -1;
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			position: sticky;
+			top: 0;
+			height: 320px;
+			flex-shrink: 0;
+			overflow: hidden;
+			pointer-events: none;
+			background: var(--neutralDark);
+			&:has([hidden]) {
+				background: transparent;
+			}
+			.profil_label {
+				display: none
+			}
+			.spoiler {
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				display: flex;
+				flex-direction: column-reverse;
+				gap: 5px;
+				height: 100%;
+				background: var(--neutral);
+			}
+			.spoiler:has([hidden]) {
+				background: transparent;
+			}
+			.spoiler_title {
+				all: unset;
+				font-size: 0;
+				pointer-events: auto;
+                display: flex;
+			}
+			.spoiler_title:after {
+				content: "fermer";
+				cursor: pointer;
+				text-align: center;
+				font-size: 10px !important;
+				color: var(--textColor);
+				letter-spacing: 1px;
+				text-transform: uppercase !important;
+				padding: 2px;
+				background: var(--neutralDarker);
+				border-radius: 3px;
+                flex:1;
+			}
+			.spoiler:has([hidden]) .spoiler_title:after {
+				content: "liste des rps"
+			}
+			dd {
+				flex: 1;
+				overflow-y: auto;
+				height: 100%;
+				border-radius: 0;
+				padding: 0;
+			}
+			dd:has([hidden]) {
+				background: transparent;
+			}
+            
+			.spoiler_content {
+				padding: 0 5px 0 0;
+				background: var(--neutral);
+				pointer-events: auto;
+				strong {
+					font-weight: 600;
+                    font-size: 13px;
+                    text-transform: uppercase;
+                    color: var(--accentClrDark);
+                    font-family: 'Rakkas';
+                    letter-spacing: 1px;
+                    margin: 0 0 -20px;
+                    display: block;
+				}
+				u {
+					color: var(--italic2);
+					font-weight: 600;
+					display: flex;
+					gap: 5px;
+					align-items: center;
+					box-shadow: none;
+                    text-transform: uppercase;
+                    font-family: 'Geist Mono';
+                    font-size: 9px;
+                    text-decoration: none;
+                    margin: 2px 0 -5px;
+                }
+				u+br,
+				br:has(+u),
+				i+br,
+				i+br+br,
+				a+br,
+                ul+br,
+                ul br {
+					display: none
+				}
+				i {
+					display: block;
+					margin: 0 0 5px;
+				}
+				i:last-of-type {
+					display: block;
+					margin: 0;
+				}
+				i:before {
+					content: "└ "
+				}
+                
+				a {
+					display: block;
+					width: 100%;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					overflow: hidden;
+                    
+                    color: var(--italic2);
+					font-weight: 600;
+					display: flex;
+					gap: 5px;
+					align-items: center;
+					box-shadow: none;
+                    text-transform: uppercase;
+                    font-family: 'Geist Mono';
+                    font-size: 10px;
+                    text-decoration: none;
+                    margin: 2px 0 -5px;
+                    transition: 200ms all;
+				}
+				a:hover {
+                    color: var(--accentClr);
+					text-align: justify;
+					text-overflow: unset;
+					white-space: wrap;
+				}
+				a:before {
+					content: "• ";
+				}
+                ul {
+                    margin: 0;
+                    padding: 0;
+                }
+                ul li {
+                    display: flex;
+                    gap:4px;
+                }
+                ul li:before {
+                    content:"• "
+                }
+                ul li i {
+                    flex:1;
+                }
+                ul li i:before {
+                    content:"";
+                }
+			}
+        } 
+    }
+}

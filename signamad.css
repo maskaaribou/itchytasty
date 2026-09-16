@@ -27,7 +27,7 @@
 	.signature_div {
 		width: 100%;
 		background: var(--neutralDarker);
-		padding: 10px 0 0px;
+		padding: 20px 0 0px;
 		overflow: hidden;
 	}
 	.signamad {
@@ -195,7 +195,6 @@
                     color: var(--accentClrDark);
                     font-family: 'Rakkas';
                     letter-spacing: 1px;
-                    text-shadow: 0 0 2px;
                     margin: 0 0 -20px;
                     display: block;
 				}
@@ -254,7 +253,7 @@
 			order: 6;
 		}
 		/*PIC*/
-		.infos-posteur:nth-of-type(5) {
+		.infos-posteur:nth-of-type(6) {
 			order: 3;
             margin: -315px 0 0;
 			img {
@@ -265,15 +264,15 @@
 			}
 		}
 		/*GROUPE*/
-		.infos-posteur:nth-of-type(6) {
+		.infos-posteur:nth-of-type(7) {
 			order: 7;
 		}
 		/*CLASSE*/
-		.infos-posteur:nth-of-type(7) {
+		.infos-posteur:nth-of-type(8) {
 			order: 8;
 		}
 		/*TRIVIA*/
-		.infos-posteur:nth-of-type(8) {
+		.infos-posteur:nth-of-type(5) {
 			order: 1;
             margin: 0;
 			padding: 0;
@@ -352,7 +351,6 @@
                     color: var(--accentClrDark);
                     font-family: 'Rakkas';
                     letter-spacing: 1px;
-                    text-shadow: 0 0 2px;
                     margin: 0 0 -20px;
                     display: block;
 				}
@@ -503,7 +501,6 @@
                     color: var(--accentClrDark);
                     font-family: 'Rakkas';
                     letter-spacing: 1px;
-                    text-shadow: 0 0 2px;
                     margin: 0 0 -20px;
                     display: block;
 				}

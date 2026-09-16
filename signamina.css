@@ -95,9 +95,11 @@
 				height: 100%;
 				border-radius: 0;
 				padding: 0;
+				pointer-events:auto;
 			}
 			dd:has([hidden]) {
 				background: transparent;
+				pointer-events:none;
 			}
 			.spoiler_content {
 				padding: 0 5px 0 0;
@@ -246,9 +248,11 @@
 				height: 100%;
 				border-radius: 0;
 				padding: 0;
+				pointer-events:auto;
 			}
 			dd:has([hidden]) {
 				background: transparent;
+				pointer-events:none;
 			}
 			.spoiler_content {
 				padding: 0 5px 0 0;
@@ -395,9 +399,11 @@
 				height: 100%;
 				border-radius: 0;
 				padding: 0;
+				pointer-events:auto;
 			}
 			dd:has([hidden]) {
 				background: transparent;
+				pointer-events:none;
 			}
             
 			.spoiler_content {

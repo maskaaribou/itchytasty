@@ -1,0 +1,118 @@
+.post.post_row:has(.signamad),
+#preview:has(.signamad),
+.post.post_row:has(.signamina),
+#preview:has(.signamina) {
+	li:has(.bx-quote-right-alt) {
+		display: none!important;
+	}
+	.linklink {
+		.filter-buttons {
+			display: flex;
+			justify-content: space-between;
+			margin: 0 0 10px;
+			gap: 10px;
+		}
+		.filter-buttons input {
+			display: none;
+		}
+		.filter-buttons label {
+			background: var(--neutralDark);
+			border-radius: 5px;
+			text-transform: uppercase !important;
+			font-size: 10px !important;
+			color: var(--textColor);
+			padding: 5px 5px 5px 10px;
+			letter-spacing: 5px;
+			cursor: pointer;
+			text-align: center;
+			opacity: 0.5;
+			transition: 200ms all;
+			flex: 1;
+		}
+		.filter-buttons input:checked+label,
+		.filter-buttons label:hover {
+			opacity: 1;
+		}
+		titre {
+			background: var(--neutralDark);
+			line-height: normal;
+			font-size: 14px;
+			font-weight: 600;
+			text-align: justify;
+			text-align-last: center;
+			padding: 10px;
+			display: block;
+		}
+		.linkonglet {
+			display: none;
+			background: var(--neutralDark);
+			color: var(--textColor);
+			position: relative;
+			flex-direction: column;
+			border-radius: 5px;
+			padding: 0 10px;
+		}
+		&:has(#link1:checked) .linkonglet#link1,
+		&:has(#link2:checked) .linkonglet#link2,
+		&:has(#link3:checked) .linkonglet#link3,
+		&:has(#link4:checked) .linkonglet#link4 {
+			display: flex;
+		}
+		x {
+			display: flex;
+			background: var(--neutral);
+			border-radius: 5px;
+			margin: 0 0 10px;
+		}
+		x:nth-of-type(odd) {
+			flex-direction: row-reverse;
+		}
+		x:nth-of-type(odd) r {
+			border-radius: 5px 0 0 5px;
+		}
+		x l {
+			display: flex;
+			flex-direction: column;
+			padding: 10px;
+			flex: 1;
+		}
+		x r {
+			display: block;
+			width: 150px;
+			background-size: cover;
+			background-position: center;
+			border-radius: 0 5px 5px 0;
+		}
+		x l a {
+			color: var(--italic2);
+			font-style: italic;
+			letter-spacing: 1px;
+			font-weight: 600;
+			border-bottom: 2px solid var(--accentClr);
+			font-size: 17px;
+			width: max-content;
+		}
+		x l lk {
+			display: block;
+			font-size: 11px;
+			margin: 2px 0 7px;
+			color: var(--italic2);
+			font-style: italic;
+			letter-spacing: 1px;
+			font-weight: 600;
+		}
+		x l d {
+			display: block;
+			height: 100px;
+			overflow-y: scroll;
+			padding: 0 5px 0 0;
+		}
+		x l b {
+			color: var(--italic2);
+			font-style: italic;
+			letter-spacing: 1px;
+			font-weight: 600;
+			font-size: 14px;
+		}
+	}
+}

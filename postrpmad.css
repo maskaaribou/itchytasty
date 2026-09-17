@@ -342,6 +342,9 @@
         width:200px;
         padding: 10px;
     }
+	.postrpmad bt:has(hrp.hidden) stuff {
+		width:100%
+	}
     .postrpmad bt stuff:before {
         content: "Inventaire :";
         text-transform: uppercase;
@@ -381,7 +384,9 @@
         border-radius: 5px;
     }
     .postrpmad tt.hidden,
-    .postrpmad bt:has(.hidden) {
+    .postrpmad hrp.hidden,
+    .postrpmad stuff.hidden),
+	.postrpmad bt:has(hrp.hidden):has(stuff.hidden){
         display: none
     }
 }

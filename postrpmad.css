@@ -24,6 +24,7 @@
 		gap: 10px;
 		font-family: "Imbue";
 		position: relative;
+        text-wrap: pretty;
 	}
 	.postrpmad:after {
 		content: "code par maskaaribou";
@@ -96,7 +97,7 @@
 		text-transform: uppercase;
 		font-size: 16px;
 		letter-spacing: 2px;
-		text-shadow: 0 0 2px;
+		text-shadow: 0 0 0;
 		line-height: 100%;
 		font-family: "Special Elite";
 	}
@@ -109,7 +110,6 @@
 		background: var(--neutralDark);
 		padding: 10px 10px 11px;
 		border-radius: 5px;
-		text-shadow: 0 0 0;
         margin: 0 0 10px auto;
         flex-wrap: wrap;
 	}
@@ -119,17 +119,18 @@
 		font-size: 18px;
 		letter-spacing: 2px;
         line-height: 100%;
+		text-shadow: 0 0 0;
 	}
 	.postrpmad m tt x {
 		background: var(--light);
 		color: var(--light);
-		padding: 1px 5px 1px;
-		font-family: "Playfair Display";
-		font-weight: 800;
-		letter-spacing: 1px;
-		border-radius: 5px;
-		font-size: 12px;
-		text-transform: uppercase;
+        padding: 3px 5px 0px;
+        font-family: "Special Elite";
+        font-weight: 600;
+        letter-spacing: 1px;
+        border-radius: 5px;
+        font-size: 12px;
+        text-transform: uppercase;
 		transition: 200ms all;
 	}
 	.postrpmad m tt:hover x {
@@ -146,7 +147,7 @@
 		align-items: center;
 		font-size: 13px;
 		letter-spacing: 1px;
-		line-height: 130%;
+		line-height: 150%;
 		font-family: "Playfair Display";
 		font-style: italic;
 		height: 100%;
@@ -263,7 +264,7 @@
 		text-transform: uppercase;
 		font-size: 17px;
 		letter-spacing: 2px;
-		text-shadow: 0 0 2px;
+		text-shadow: 0 0 0;
 		border-bottom: 1px solid var(--light);
 		padding: 0 0 3px;
 		display: block;
@@ -292,29 +293,28 @@
 		text-align: center;
 	}
 	.postrpmad bt {
-		background: var(--neutral);
 		display: flex;
 		width: 100%;
-		padding: 10px;
-		gap: 10px;
 		line-height: 100%;
-		border-radius: 5px;
-		align-items: center;
+        align-items: stretch;
+        background: var(--neutral);
+        border-radius: 5px;
+        gap:10px;
+        padding: 10px;
 	}
+    .postrpmad bt y {
+        display: flex;
+    }
 	.postrpmad bt hrp {
-		display: flex;
+		display: block;
 		background: var(--neutralDark);
 		border-radius: 5px;
 		border-right: 5px solid var(--color);
-		padding: 15px;
+		padding: 10px;
 		font-size: 13px;
 		letter-spacing: 1px;
-		text-shadow: 0 0 2px;
-		line-height: 130%;
+		line-height: 150%;
 		font-family: "Playfair Display";
-		font-style: italic;
-		height: 100%;
-		width: 100%;
 	}
 	.postrpmad bt hrp:before {
 		content: "HRP :";
@@ -328,7 +328,58 @@
 		font-style: normal;
 		margin: 0 6px 0 0;
 		display: inline;
+		text-shadow: 0 0 2px;
 	}
+    .postrpmad bt stuff {
+        background: var(--neutralDark);
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        width:200px;
+        padding: 10px;
+    }
+    .postrpmad bt stuff:before {
+        content: "Inventaire :";
+        text-transform: uppercase;
+        font-size: 18px;
+        letter-spacing: 2px;
+        line-height: 100%;
+        text-shadow: 0 0 0;
+        font-family: "Imbue";
+    }
+    .postrpmad bt stuff x {
+        background: var(--light);
+        display: block;
+        padding: 3px 5px 0px;
+        font-family: "Special Elite";
+        font-weight: 600;
+        letter-spacing: 1px;
+        border-radius: 5px;
+        font-size: 12px;
+        text-transform: uppercase;
+        width:100%;
+        color: black;
+    }
+    .postrpmad hrp u {
+        font-weight: bold;
+        color:black;
+        display: inline;
+        background:var(--color);
+        padding:0 3px;
+        border-radius: 5px;
+        box-shadow: none;
+    }
+    .postrpmad hrp strong {
+        color:black;
+        display: inline;
+        background:var(--textColor);
+        padding:0 3px;
+        border-radius: 5px;
+    }
     .postrpmad tt.hidden,
     .postrpmad bt:has(.hidden) {
         display: none

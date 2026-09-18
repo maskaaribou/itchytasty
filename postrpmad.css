@@ -305,6 +305,9 @@
     .postrpmad bt y {
         display: flex;
     }
+    .postrpmad bt y:has(hrp) {
+        width:100%
+    }
 	.postrpmad bt hrp {
 		display: block;
 		background: var(--neutralDark);

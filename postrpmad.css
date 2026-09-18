@@ -318,6 +318,7 @@
 		letter-spacing: 1px;
 		line-height: 150%;
 		font-family: "Playfair Display";
+		width: 100%;
 	}
 	.postrpmad bt hrp:before {
 		content: "HRP :";

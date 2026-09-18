@@ -9,10 +9,12 @@
 	}
 	.postrpmad.rox,
 	.postrpmad.roxanne {
-		--light: #c6ac8a;
-		--color: #748bb2;
+		--light: #EFC88E;
+		--color: #6EB1A7;
 	}
 	.postrpmad {
+		--white:#dadada;
+		color:var(--white);
 		background: var(--neutralDark);
 		padding: 10px;
 		border-radius: 5px;

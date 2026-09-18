@@ -384,9 +384,9 @@
         border-radius: 5px;
     }
     .postrpmad tt.hidden,
-    .postrpmad hrp.hidden,
-    .postrpmad stuff.hidden),
-	.postrpmad bt:has(hrp.hidden):has(stuff.hidden){
-        display: none
+    .postrpmad y:has(.hidden),
+    .postrpmad bt:has(hrp.hidden):has(stuff.hidden){
+        display: none!important
+            
     }
 }

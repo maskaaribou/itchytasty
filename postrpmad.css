@@ -353,6 +353,7 @@
         line-height: 100%;
         text-shadow: 0 0 0;
         font-family: "Imbue";
+		text-wrap: nowrap;
     }
     .postrpmad bt stuff x {
         background: var(--light);
@@ -387,6 +388,15 @@
     .postrpmad y:has(.hidden),
     .postrpmad bt:has(hrp.hidden):has(stuff.hidden){
         display: none!important
-            
     }
+    .postrpmad bt:has(.hidden) y:has(stuff) {
+	    width:100%;
+	    stuff {
+	        flex-direction: row!important;
+			flex-wrap:wrap;
+	    }
+		stuff x {
+			width:fit-content
+		}
+	}
 }

@@ -6,7 +6,61 @@
         b2 {padding:1px 10px 0;line-height: 120%}
     }
 
-	.signature_div {display:none}
+	.signamina {
+	    display: flex;
+	    margin: 0 0 0 auto;
+	    width: max-content;
+	    gap:10px;
+	    flex-direction: column-reverse;
+	    
+	    --light: #EFC88E;
+	    --color: #6EB1A7;
+	    --white:#dadada;
+	    border-radius: 5px;
+	    padding: 10px;
+	    background:var(--neutralDark)
+	}
+	
+	.signamina pic {
+	    background-image:url(https://i.imgur.com/aoy2AI7.gif);
+	    background-size:cover;
+	    background-position:top center;
+	    height:100px;
+	    display: flex;
+	    border-radius: 5px;
+	}
+	
+	.signamina r {
+	    display: block;
+	    height:max-content;
+	    font-size: 14px!important;
+	    color:var(--white);
+	}
+	
+	.signamina r * {
+	    font-size: 14px!important;
+	}
+	
+	.signamina r b2 {
+	    padding:1px 5px 0;line-height: 120%;
+	    background:var(--color);
+	}
+	
+	.signamina r i2 {
+	    margin: 0;
+	    border-bottom: 2px solid var(--color);
+	    color:var(--light);
+	}
+	
+	.signamina soustf3 {
+	    color:var(--color)
+	}
+	
+	.signamina i3 {
+	    color:var(--light)
+	}
+	
+
 	
 	.contents {
 		text-wrap: pretty;

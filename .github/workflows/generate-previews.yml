@@ -1,0 +1,72 @@
+
+name: Generate GIF previews
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 3 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  generate-previews:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v4
+
+      - name: Installer les outils
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick
+
+      - name: Télécharger les GIFs et générer les previews
+        env:
+          CSV_URL: "https://docs.google.com/spreadsheets/d/e/2PACX-1vR8CIQQhD3_8ZUHFTjfBpVRHg80thTHSu-gZFH37f-PNOGEeYjM7Bu_2ZinK59tVDYxrJM5lpkue8Iy/pub?gid=1913411064&single=true&output=csv"
+        run: |
+          mkdir -p previews
+          mkdir -p temp_gifs
+
+          curl -L "$CSV_URL" -o sheet.csv
+
+          tail -n +2 sheet.csv | cut -d '"' -f 2 | while read -r url; do
+            if [ -z "$url" ]; then
+              continue
+            fi
+
+            filename=$(echo -n "$url" | md5sum | cut -d ' ' -f 1)
+            output="previews/${filename}.jpg"
+
+            if [ -f "$output" ]; then
+              echo "Preview déjà existante : $output"
+              continue
+            fi
+
+            echo "Téléchargement : $url"
+
+            curl -L --max-time 30 "$url" \
+              -o "temp_gifs/${filename}.gif" || continue
+
+            magick \
+              "temp_gifs/${filename}.gif[0]" \
+              -resize "500x>" \
+              -background white \
+              -alpha remove \
+              -quality 85 \
+              "$output" || true
+
+            rm -f "temp_gifs/${filename}.gif"
+          done
+
+      - name: Enregistrer les previews
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add previews/
+
+          git diff --cached --quiet || git commit -m "Generate GIF previews"
+
+          git push

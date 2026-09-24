@@ -1,1 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+@font-face {
+    font-family: "RE font";
+    src: url("https://cdn.jsdelivr.net/gh/fritealacantine/mes-fonts/Resident%20Evil%207%20Regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #08080a;
+	color: #dedede;
+	font-family: Geist Mono;
+}
+
+.gif-library {
+	width: min(1400px, calc(100% - 40px));
+	margin: 40px auto;
+    background:#17171fae;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+/* HEADER */
+
+.library-header {
+	position: sticky;
+	top: 0px;
+	z-index: 10;
+	margin-bottom: 25px;
+    text-align: center;
+}
+
+.library-header h1 {
+	margin: 0 0 -15px;
+	font-size: 24px;
+	font-weight: 400;
+    
+    position: relative;
+    font-size: 182px;
+    font-family: 'RE font';
+    font-weight: 200;
+    letter-spacing: 7px;
+    color: transparent !important;
+    background-clip: text !important;
+    background-image: linear-gradient(90deg, #dedede, #c34664) !important;
+    text-transform: uppercase
+}
+
+#search {
+	display: block;
+	width: 100%;
+	padding:10px;
+	border-radius: 5px;
+	outline: none;
+	background: #08080a;
+	color: #fff;
+	font-size: 14px;
+    font-family:"Geist Mono";
+    border:none;
+}
+
+#search::placeholder {
+	color: #777;
+}
+
+/* FILTERS */
+
+.filters {
+	display: none;
+	flex-direction: column;
+	gap: 15px;
+	margin-bottom: 25px;
+}
+
+.filter-category {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 6px;
+}
+
+.filter-category-title {
+	width: 90px;
+	color: #777;
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.filter-button {
+	padding: 6px 9px;
+	border: 1px solid #3d3739;
+	border-radius: 4px;
+	background: #211e1f;
+	color: #999;
+	cursor: pointer;
+	font-size: 11px;
+}
+
+.filter-button:hover {
+	border-color: #76474e;
+	color: #fff;
+}
+
+.filter-button.active {
+	background: #76474e;
+	border-color: #76474e;
+	color: #fff;
+}
+
+/* COUNT */
+
+.count {
+	margin-bottom: 15px;
+	color: #666;
+	font-size: 14px;
+    font-family: Geist Mono;
+}
+
+/* RESULTS */
+
+.results {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	gap: 15px;
+}
+
+.gif-card {
+	position: relative;
+	overflow: hidden;
+	border: 1px solid #302b2c;
+	border-radius: 5px;
+	background: #211e1f;
+}
+
+.gif-image {
+	display: block;
+	width: 268px;
+	height: 150px;
+	object-fit: cover;
+	background: #191718;
+}
+
+.gif-tags {
+	display: none;
+	flex-wrap: wrap;
+	gap: 4px;
+	padding: 10px;
+}
+
+.gif-tag {
+	padding: 3px 5px;
+	border-radius: 3px;
+	background: #302b2c;
+	color: #888;
+	font-size: 9px;
+}
+
+.gif-tags .tag {
+    display: block;
+    background:#c34664;
+    padding:0 5px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+/* EMPTY */
+
+.empty {
+	display: none;
+	padding: 60px 20px;
+	text-align: center;
+	color: #666;
+	font-size: 13px;
+}
+
+.empty.visible {
+	display: block;
+}

@@ -437,7 +437,7 @@ function createCard(gif) {
 
         setTimeout(() => {
             card.classList.remove("clicked");
-        }, 200);
+        }, 300);
 
         try {
             await navigator.clipboard.writeText(gif.GIF);

@@ -422,32 +422,14 @@ function createCard(gif) {
     card.appendChild(image);
     card.appendChild(tags);
 
-    let gifImage = null;
+    const previewURL = getPreviewURL(gif.GIF);
 
     card.addEventListener("mouseenter", () => {
-        if (gifImage) return;
-
-        gifImage = document.createElement("img");
-        gifImage.className = "gif-image";
-        gifImage.src = gif.GIF;
-        gifImage.alt = image.alt;
-
-        image.replaceWith(gifImage);
+        image.src = gif.GIF;
     });
 
     card.addEventListener("mouseleave", () => {
-        if (!gifImage) return;
-
-        const preview = document.createElement("img");
-
-        preview.className = "gif-image";
-        preview.src = getPreviewURL(gif.GIF);
-        preview.alt = image.alt;
-        preview.loading = "lazy";
-        preview.decoding = "async";
-
-        gifImage.replaceWith(preview);
-        gifImage = null;
+        image.src = previewURL;
     });
 
     card.addEventListener("click", async () => {

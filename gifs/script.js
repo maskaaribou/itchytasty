@@ -572,6 +572,16 @@ function applyFilters() {
         );
     });
 
+    filteredGifs.sort((a, b) => {
+        const aMultiple = a.Nom.length >= 2;
+        const bMultiple = b.Nom.length >= 2;
+
+        if (aMultiple && !bMultiple) return -1;
+        if (!aMultiple && bMultiple) return 1;
+
+        return 0;
+    });
+
     const totalPages = Math.max(
         1,
         Math.ceil(filteredGifs.length / GIFS_PER_PAGE)

@@ -327,37 +327,45 @@ function createFilters() {
         const wrapper = document.createElement("div");
         wrapper.className = "filter-group";
 
-        const title = document.createElement("div");
+        const title = document.createElement("button");
+        title.type = "button";
         title.className = "filter-title";
         title.textContent = category;
 
-        const select = document.createElement("select");
-        select.dataset.category = category;
-
-        const allOption = document.createElement("option");
-        allOption.value = "";
-        allOption.textContent = "Tous";
-
-        select.appendChild(allOption);
+        const menu = document.createElement("div");
+        menu.className = "filter-menu";
 
         [...values]
             .sort((a, b) =>
                 normalize(a).localeCompare(normalize(b))
             )
             .forEach(value => {
-                const option = document.createElement("option");
-                option.value = value;
-                option.textContent = value;
-                select.appendChild(option);
+                const label = document.createElement("label");
+
+                const checkbox = document.createElement("input");
+                checkbox.type = "checkbox";
+                checkbox.value = value;
+                checkbox.dataset.category = category;
+
+                checkbox.addEventListener("change", () => {
+                    currentPage = 1;
+                    applyFilters();
+                });
+
+                label.appendChild(checkbox);
+                label.appendChild(
+                    document.createTextNode(" " + value)
+                );
+
+                menu.appendChild(label);
             });
 
-        select.addEventListener("change", () => {
-            currentPage = 1;
-            applyFilters();
+        title.addEventListener("click", () => {
+            wrapper.classList.toggle("open");
         });
 
         wrapper.appendChild(title);
-        wrapper.appendChild(select);
+        wrapper.appendChild(menu);
         container.appendChild(wrapper);
     });
 }
@@ -376,18 +384,21 @@ function matchesSearch(gif, search) {
 }
 
 function matchesFilters(gif) {
-    const selects = document.querySelectorAll(
-        "#filters select[data-category]"
-    );
+    const groups = document.querySelectorAll(".filter-group");
 
-    return [...selects].every(select => {
-        const value = select.value;
-
-        if (!value) return true;
-
-        return gif[select.dataset.category].some(
-            tag => normalize(tag) === normalize(value)
+    return [...groups].every(group => {
+        const checked = group.querySelectorAll(
+            'input[type="checkbox"]:checked'
         );
+
+        if (!checked.length) return true;
+
+        return [...checked].every(checkbox => {
+            return gif[checkbox.dataset.category].some(
+                tag =>
+                    normalize(tag) === normalize(checkbox.value)
+            );
+        });
     });
 }
 

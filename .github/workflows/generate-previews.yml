@@ -75,7 +75,7 @@ jobs:
               continue
             fi
 
-            magick \
+            convert \
               "temp_gifs/${filename}.gif[0]" \
               -resize "500x>" \
               -background white \

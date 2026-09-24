@@ -433,6 +433,12 @@ function createCard(gif) {
     });
 
     card.addEventListener("click", async () => {
+        card.classList.add("clicked");
+
+        setTimeout(() => {
+            card.classList.remove("clicked");
+        }, 150);
+
         try {
             await navigator.clipboard.writeText(gif.GIF);
         } catch {
@@ -476,6 +482,7 @@ function createPagination() {
 
         currentPage--;
         render();
+
         window.scrollTo({
             top: 0,
             behavior: "smooth"

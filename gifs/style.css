@@ -36,7 +36,7 @@ body {
 	z-index: 10;
 	margin-bottom: 25px;
     text-align: center;
-    background:#17171fae;
+    background:#121218;
     border-radius: 5px;
     padding: 20px;
 }
@@ -47,7 +47,7 @@ body {
 	font-weight: 400;
     
     position: relative;
-    font-size: 182px;
+    font-size: 100px;
     font-family: 'RE font';
     font-weight: 200;
     letter-spacing: 7px;
@@ -137,7 +137,7 @@ body {
     align-items: center;
     justify-content: center;
 	
-    background:#17171fae;
+    background:#121218;
     border-radius: 5px;
     padding: 20px;
 }

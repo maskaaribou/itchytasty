@@ -76,7 +76,7 @@ function createPagination() {
 }
 
 function render() {
-    const container = document.getElementById("gif-container");
+    const container = document.getElementById("results");
 
     if (!container) return;
 

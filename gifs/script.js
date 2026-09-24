@@ -460,6 +460,34 @@ function createCard(gif) {
     return card;
 }
 
+function getPageData() {
+    const multipleNames = filteredGifs.filter(
+        gif => Array.isArray(gif.Nom) && gif.Nom.length >= 2
+    );
+
+    const singleNames = filteredGifs.filter(
+        gif => !Array.isArray(gif.Nom) || gif.Nom.length < 2
+    );
+
+    return {
+        multipleNames,
+        singleNames
+    };
+}
+
+function getTotalPages() {
+    const { multipleNames, singleNames } = getPageData();
+
+    if (!multipleNames.length) {
+        return Math.max(
+            1,
+            Math.ceil(singleNames.length / GIFS_PER_PAGE)
+        );
+    }
+
+    return 1 + Math.ceil(singleNames.length / GIFS_PER_PAGE);
+}
+
 function createPagination() {
     const container = document.getElementById("pagination");
 
@@ -467,17 +495,7 @@ function createPagination() {
 
     container.innerHTML = "";
 
-    const multipleNames = filteredGifs.filter(
-        gif => gif.Nom.length >= 2
-    );
-
-    const singleNames = filteredGifs.filter(
-        gif => gif.Nom.length < 2
-    );
-
-    const totalPages =
-        (multipleNames.length ? 1 : 0) +
-        Math.ceil(singleNames.length / GIFS_PER_PAGE);
+    const totalPages = getTotalPages();
 
     if (totalPages <= 1) return;
 
@@ -541,27 +559,33 @@ function createPagination() {
 
 function render() {
     const container = document.getElementById("gif-container");
+
+    if (!container) return;
+
     container.innerHTML = "";
 
-    const multipleNames = filteredGifs.filter(
-        gif => gif.Nom.length >= 2
-    );
-
-    const singleNames = filteredGifs.filter(
-        gif => gif.Nom.length < 2
-    );
+    const {
+        multipleNames,
+        singleNames
+    } = getPageData();
 
     let pageGifs;
 
-    if (multipleNames.length && currentPage === 1) {
-        pageGifs = multipleNames;
-    } else {
-        const singlePage =
-            multipleNames.length
-                ? currentPage - 2
-                : currentPage - 1;
+    if (multipleNames.length) {
+        if (currentPage === 1) {
+            pageGifs = multipleNames;
+        } else {
+            const start =
+                (currentPage - 2) * GIFS_PER_PAGE;
 
-        const start = singlePage * GIFS_PER_PAGE;
+            pageGifs = singleNames.slice(
+                start,
+                start + GIFS_PER_PAGE
+            );
+        }
+    } else {
+        const start =
+            (currentPage - 1) * GIFS_PER_PAGE;
 
         pageGifs = singleNames.slice(
             start,
@@ -587,26 +611,9 @@ function applyFilters() {
         );
     });
 
-    const multipleNames = filteredGifs.filter(
-        gif => gif.Nom.length >= 2
-    );
+    const totalPages = getTotalPages();
 
-    const singleNames = filteredGifs.filter(
-        gif => gif.Nom.length < 2
-    );
-
-    filteredGifs = [
-        ...multipleNames,
-        ...singleNames
-    ];
-
-    const totalPages =
-        (multipleNames.length ? 1 : 0) +
-        Math.ceil(singleNames.length / GIFS_PER_PAGE);
-
-    if (totalPages === 0) {
-        currentPage = 1;
-    } else if (currentPage > totalPages) {
+    if (currentPage > totalPages) {
         currentPage = totalPages;
     }
 

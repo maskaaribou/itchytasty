@@ -22,7 +22,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y imagemagick
 
-      - name: Télécharger les GIFs et générer les previews
+            - name: Télécharger les GIFs et générer les previews
         env:
           CSV_URL: "https://docs.google.com/spreadsheets/d/e/2PACX-1vR8CIQQhD3_8ZUHFTjfBpVRHg80thTHSu-gZFH37f-PNOGEeYjM7Bu_2ZinK59tVDYxrJM5lpkue8Iy/pub?gid=1913411064&single=true&output=csv"
         run: |
@@ -31,7 +31,30 @@ jobs:
 
           curl -L "$CSV_URL" -o sheet.csv
 
-          tail -n +2 sheet.csv | cut -d '"' -f 2 | while read -r url; do
+          python3 <<'PY'
+          import csv
+          import re
+
+          with open("sheet.csv", "r", encoding="utf-8-sig", newline="") as file:
+              reader = csv.DictReader(file)
+
+              with open("gif_urls.txt", "w", encoding="utf-8") as output:
+                  for row in reader:
+                      url = row.get("GIF", "").strip()
+
+                      if not url:
+                          continue
+
+                      # Si la cellule contient [URL](URL), récupérer uniquement l'URL
+                      match = re.match(r"\[.*?\]\((https?://[^)]+)\)", url)
+
+                      if match:
+                          url = match.group(1)
+
+                      output.write(url + "\n")
+          PY
+
+          while IFS= read -r url; do
             if [ -z "$url" ]; then
               continue
             fi
@@ -58,7 +81,7 @@ jobs:
               "$output" || true
 
             rm -f "temp_gifs/${filename}.gif"
-          done
+          done < gif_urls.txt
 
       - name: Enregistrer les previews
         run: |

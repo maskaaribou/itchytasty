@@ -149,6 +149,38 @@ body {
 	border-radius: 5px;
 	background: #211e1f;
 	width:268px;
+    filter: grayscale(0);
+}
+
+.gif-card:after {
+    content:"cliquer pour copier le lien";
+    font-variant: small-caps;
+    display: block;
+    text-align: center;
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    background:#17171fae;
+    opacity: 0;
+    transition: 200ms all;
+}
+
+.gif-card:hover:after {
+    opacity: 1;
+}
+
+.gif-card.clicked:after {
+    content:"lien copié";
+    font-variant: small-caps;
+    display: block;
+    text-align: center;
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    background: #121218;
+    opacity: 1;
 }
 
 .gif-image {
@@ -157,6 +189,13 @@ body {
 	height: 150px;
 	object-fit: cover;
 	background: #191718;
+    transition: 200ms all;
+}
+
+.gif-card.clicked .gif-image {
+    padding: 10px;
+    filter:grayscale(1);
+    transition: 200ms all;
 }
 
 .gif-tags {

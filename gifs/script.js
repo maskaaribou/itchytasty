@@ -77,7 +77,7 @@ function splitTags(value) {
 function getPreviewURL(gifURL) {
     const hash = md5(gifURL);
 
-    return `gifs/previews/${hash}.jpg`;
+    return `previews/${hash}.jpg`;
 }
 
 function md5(string) {

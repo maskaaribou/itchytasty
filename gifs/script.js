@@ -378,6 +378,9 @@ function createCard(gif) {
     const image = document.createElement("img");
     image.className = "gif-image";
     image.src = getPreviewURL(gif.GIF);
+    console.log(gif.GIF);
+    console.log(md5(gif.GIF));
+    console.log(getPreviewURL(gif.GIF));
     image.alt = gif.Nom.join(", ");
 
     imageWrapper.appendChild(image);

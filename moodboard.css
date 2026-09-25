@@ -69,7 +69,9 @@
 		gap: 10px;
 		transition: 200ms all;
 		z-index: 9;
-		background: var(--neutral)
+		background: var(--neutral);
+		padding:50px;
+		text-align:center;
 	}
 	.moodboard img:hover+div {
 		opacity: 1;

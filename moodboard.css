@@ -2,6 +2,10 @@
 	display: none;
 }
 
+.post.post_row:has(.signamad) .signature_div {
+	display:none;
+}
+
 .post.post_row:has(.signamad),
 #preview:has(.signamad),
 .post.post_row:has(.signamina),

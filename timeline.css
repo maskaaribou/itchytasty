@@ -204,11 +204,15 @@
 
 #timeline .chrono x c {
 	font-size:0;
+	border-top:0px solid var(--neutralDark);
 	transition: 200ms all;
 }
 
 #timeline .chrono x:hover c {
 	font-size:12px;
+	border-top:3px solid var(--neutralDark);
+    margin: 7px 0 0;
+    padding: 5px 0 0;
 }
 
 #timeline .chrono x soustf3 {

@@ -116,6 +116,7 @@
 	background: var(--neutral);
 	border-radius: 5px;
 	padding: 0 0 0 5px;
+	cursor:help;
 }
 
 #timeline .chrono x:has(a),
@@ -132,7 +133,7 @@
     font-size: 10px !important;
     color: var(--textColor);
     font-family: 'Geist Mono';
-    padding: 3px;
+    padding: 10px 3px;
     margin: 0 -5px 0 0;
     width:19px
 }
@@ -162,10 +163,10 @@
 	flex: 1;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	align-items: flex-start;
 	text-align: justify;
 	padding: 10px 15px 10px 0;
-	gap: 10px;
 }
 
 #timeline .chrono w {
@@ -200,6 +201,17 @@
 	margin: 2px 0 0;
 	;
 }
+
+#timeline .chrono x c {
+	font-size:0;
+	transition: 200ms all;
+}
+
+#timeline .chrono x:hover c {
+	font-size:12px;
+}
+
+
 
 center:has(#timeline):after {
 	content: "code par maskaaribou";

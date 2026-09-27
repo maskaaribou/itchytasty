@@ -211,7 +211,9 @@
 	font-size:12px;
 }
 
-
+#timeline .chrono x soustf3 {
+    font-size: 15px!important
+}
 
 center:has(#timeline):after {
 	content: "code par maskaaribou";

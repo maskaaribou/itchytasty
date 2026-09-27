@@ -51,7 +51,7 @@
 	display: block;
 	position: absolute;
 	top: 0px;
-	left: 33.5px;
+	left: 47.5px;
 	z-index: 1;
 }
 
@@ -115,6 +115,7 @@
 	align-items: stretch;
 	background: var(--neutral);
 	border-radius: 5px;
+	padding: 0 0 0 5px;
 }
 
 #timeline .chrono x:has(a),
@@ -122,8 +123,22 @@
 	display: flex;
 }
 
+#timeline .chrono x d {
+    writing-mode: vertical-rl;
+	transform: rotate(180deg);
+    display: block;
+    text-align: center;
+    text-transform: uppercase !important;
+    font-size: 10px !important;
+    color: var(--textColor);
+    font-family: 'Geist Mono';
+    padding: 3px;
+    margin: 0 -5px 0 0;
+    width:19px
+}
+
 #timeline .chrono x m {
-	width: 50px;
+	width: 40px;
 	z-index: 2;
 	justify-content: center;
 	display: flex;

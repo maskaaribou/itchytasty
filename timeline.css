@@ -176,6 +176,7 @@
 	background-size: cover;
 	background-position: center;
 	border-radius: 0 5px 5px 0;
+	min-height: 55px;
 }
 
 #timeline .chrono l {

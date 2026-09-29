@@ -7,10 +7,18 @@
 		--light: #844D63;
 		--color: #BD716B;
 	}
+	.postrpmad.hope {
+		--light: #93afb1;
+		--color: #a0b197;
+	}
 	.postrpmad.rox,
 	.postrpmad.roxanne {
 		--light: #EFC88E;
 		--color: #6EB1A7;
+	}
+	.postrpmad.willow {
+		--light: #668b59;
+		--color: #D49E5B;
 	}
 	.postrpmad {
 		--white:#dadada;
@@ -211,34 +219,55 @@
 	.postrpmad rp strike {
 		text-decoration-color: var(--light)
 	}
+	
+	.postrpmad rp d {color: #BD716B}
+	.postrpmad rp r {color: #6EB1A7}
+	.postrpmad rp w {color: #D49E5B}
+	.postrpmad rp h {color: #a0b197}
+	
 	.postrpmad rp d,
-	.postrpmad rp r {
+	.postrpmad rp r,
+	.postrpmad rp w,
+	.postrpmad rp h {
 		font-weight: bold;
 		letter-spacing: 1px;
-		color: var(--color);
 	}
 	.postrpmad rp d:has(en):hover,
-	.postrpmad rp r:has(en):hover {
+	.postrpmad rp r:has(en):hover,
+	.postrpmad rp w:has(en):hover,
+	.postrpmad rp h:has(en):hover {
 		cursor: help;
 	}
 	.postrpmad rp d:before,
-	.postrpmad rp r:before {
+	.postrpmad rp r:before,
+	.postrpmad rp w:before,
+	.postrpmad rp h:before {
 		content: "« "
 	}
 	.postrpmad rp d:after,
-	.postrpmad rp r:after {
+	.postrpmad rp r:after,
+	.postrpmad rp w:after,
+	.postrpmad rp h:after {
 		content: " »"
 	}
 	.postrpmad rp d en,
 	.postrpmad rp r en,
+	.postrpmad rp w en,
+	.postrpmad rp h en,
 	.postrpmad rp d:hover fr,
-	.postrpmad rp r:hover fr {
+	.postrpmad rp r:hover fr,
+	.postrpmad rp w:hover fr,
+	.postrpmad rp h:hover fr {
 		display: inline;
 	}
 	.postrpmad rp d fr,
 	.postrpmad rp r fr,
+	.postrpmad rp w fr,
+	.postrpmad rp h fr,
 	.postrpmad rp d:hover en,
-	.postrpmad rp r:hover en {
+	.postrpmad rp r:hover en,
+	.postrpmad rp w:hover en,
+	.postrpmad rp h:hover en {
 		display: none;
 	}
 	.postrpmad info {
@@ -416,9 +445,7 @@
 		stuff x {
 			width:fit-content
 		}
-	}
-	.postrpmad.david rp r {color: #748bb2}
-	.postrpmad.rox rp d, .postrpmad.roxanne rp d {color: #BD716B}
+	}	
 	.postrpmad rp .spoiler {
 	    width:calc(100% + 40px);
         margin: 0 -20px;

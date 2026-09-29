@@ -5,6 +5,44 @@
 	}
 }
 
+.post:has(.signamad.david) {
+	.post_rank {
+	    --accentClrDark: #844D63;
+	    --accentClr:#844D63;
+	    --italic2:#BD716B;
+	}
+	.infos-posteur:nth-of-type(3)>span:not(.profil_label):after {
+		content: "• Contexte militaire / policier \a • Dépression \a • Deuil \a • Relation age gap (7 ans d'écart) \a • Rupture";
+		font-size: 13px;
+		white-space: pre-wrap;
+        display: inline-block;
+	}
+	.infos-posteur:nth-of-type(6)>span:not(.profil_label):after {
+		content: "• FC: Jon Bernthal \a • Avatar: @Maskaaribou \a • Codes: @Maskaaribou";
+		font-size: 13px;
+		white-space: pre-wrap;
+		display: inline-block;
+	}	
+}
+.post:has(.signamad.hope) {
+	.post_rank {
+    	--accentClrDark: #93afb1;
+    	--accentClr:#93afb1;
+    	--italic2:#a0b197;
+	}
+	.infos-posteur:nth-of-type(3)>span:not(.profil_label):after {
+		content: "• Blessures \a • Dépression \a • Deuil";
+		font-size: 13px;
+		white-space: pre-wrap;
+        display: inline-block;
+	}
+	.infos-posteur:nth-of-type(6)>span:not(.profil_label):after {
+		content: "• FC: Taylor Hickson \a • Avatar: @Maskaaribou \a • Codes: @Maskaaribou";
+		font-size: 13px;
+		white-space: pre-wrap;
+		display: inline-block;
+	}
+}
 .post:has(.signamad) {
 	.cadrepseudop {
 		z-index:4
@@ -83,10 +121,40 @@
 		}
 	}
 
-
-
-
-
+	.signamad .post_rank {
+		text-align: center;
+		width: 100%;
+		display: block;
+		background: var(--neutral);
+		border-radius: 5px;
+		padding: 3px;
+        letter-spacing: -1px;
+        font-family: 'Geist Mono';
+		text-transform: uppercase;
+		i2 {
+			margin: 0;
+			text-transform: uppercase;
+	        letter-spacing: 1px;
+	        border-bottom: none;
+	        text-decoration: underline 2px var(--accentClr);
+		}
+		soustf3 {
+			margin: 0 0 0 3px;
+            font-size:15px!important;
+		}
+		b2 {
+			display: inline-flex;
+			height: 20px;
+			width: 20px;
+			padding: 3px 0 0;
+			margin: 0;
+			justify-content: center;
+			align-items: center;
+			line-height: 100%;
+			overflow: hidden;
+			font-size: 15px
+		}
+	}
 	
 	.contents {
 		text-wrap: pretty;
@@ -405,18 +473,6 @@
 		}
 		.infos-posteur:nth-of-type(2)>span:not(.profil_label):after {
 			content: "• Abus et crimes sexuels \a • Décès d’un parent ou d'un animal (surtout IRL, toléré inRP si juste mentionné) \a • Procédures médicales en détail (injections & piqûres notamment) \a • Relations avec rapport de force ou de pouvoir";
-			font-size: 13px;
-			white-space: pre-wrap;
-            display: inline-block;
-		}
-        .infos-posteur:nth-of-type(3)>span:not(.profil_label):after {
-			content: "• Contexte militaire / policier \a • Dépression \a • Deuil \a • Relation age gap (7 ans d'écart) \a • Rupture";
-			font-size: 13px;
-			white-space: pre-wrap;
-            display: inline-block;
-		}
-        .infos-posteur:nth-of-type(6)>span:not(.profil_label):after {
-			content: "• FC: Jon Bernthal \a • Avatar: @Maskaaribou \a • Codes: @Maskaaribou";
 			font-size: 13px;
 			white-space: pre-wrap;
             display: inline-block;

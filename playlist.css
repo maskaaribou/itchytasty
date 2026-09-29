@@ -16,7 +16,7 @@
 	gap: 10px;
 }
 
-.filter-buttons input {
+.playlist input {
 	display: none;
 }
 
@@ -119,6 +119,21 @@
 
 .playlist x:hover b2 {
     opacity: 0;
+}
+
+.playlist b2:after {
+    content:"survolez pour afficher la vidéo";
+    display: block;
+    position: absolute;
+    text-align: center;
+    width:100%;
+    color: var(--italic2);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 9px;
+    font-family: geist mono;
+    margin: 10px 0 0;
 }
 
 .playlist x tw {

@@ -136,7 +136,7 @@
 
 
 .playlist {
-	&:has(#link1: checked) .linkonglet#link1, &:has(#link2:checked) .linkonglet#link2, &:has(#link3:checked) .linkonglet#link3, &:has(#link4:checked) .linkonglet#link4, &:has(#link5:checked) .linkonglet#link5 {
+	&:has(#link1:checked) .linkonglet#link1, &:has(#link2:checked) .linkonglet#link2, &:has(#link3:checked) .linkonglet#link3, &:has(#link4:checked) .linkonglet#link4, &:has(#link5:checked) .linkonglet#link5 {
 		display: flex!important;
 	}
 }

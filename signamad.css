@@ -40,12 +40,20 @@
 		background: var(--neutralDarker);
 		border-radius: 5px;
 	}
-	.signamad img {
+	.signamad.david img {
 		content: url(https://i.imgur.com/in969UX.gif);
 		width: 100%;
 		height: 150px;
 		object-fit: cover;
 		object-position: 0 28%;
+		border-radius: 5px;
+	}
+	.signamad.hope img {
+		content: url(https://i.imgur.com/hgpRKqJ.gif);
+		width: 100%;
+		height: 150px;
+		object-fit: cover;
+		object-position: 0 38%;
 		border-radius: 5px;
 	}
 	.post_rank {
@@ -55,11 +63,18 @@
 		background: var(--neutral);
 		border-radius: 5px;
 		padding: 1px 3px 5px;
+    	font-weight: 10px!important;
 		i2 {
 			margin: 0;
+			text-transform: uppercase;
+	        font-size:12px!important;
+	        letter-spacing: 1px;
+	        border-bottom: none;
+	        text-decoration: underline 2px var(--accentClr);
 		}
 		soustf3 {
-			margin: 0 0 0 3px
+			margin: 0 0 0 3px;
+        	font-size:12px!important
 		}
 		b2 {
 			display: block;

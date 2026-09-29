@@ -1,99 +1,142 @@
 .playlist {
-    display: flex;
-    flex-direction: column-reverse;
-		width: 100%;
-		gap: 5px;
-		margin: auto;
-        padding: 10px 15px 10px;
-        border-radius:0 0 5px 5px;
-        background:var(--neutralDark);
+	display: flex;
+	flex-direction: column-reverse;
+	width: 100%;
+	gap: 10px;
+	margin: auto;
+	padding: 10px 15px 10px;
+	border-radius: 0 0 5px 5px;
+	background: var(--neutralDark);
 }
 
 .filter-buttons {
-            display: flex;
-            justify-content: space-between;
-            margin: 0 0 10px;
-            gap: 10px;
-        }
+	display: flex;
+	justify-content: space-between;
+	margin: 0 0 10px;
+	gap: 10px;
+}
+
 .filter-buttons input {
-    display: none;
+	display: none;
 }
 
 .filter-buttons label {
-    border:5px solid var(--neutral);
-    border-radius: 5px;
-    position: relative;
-    transition:200ms all;
-    justify-content: center;
-    align-items: center;
-    display: flex;
+	border: 5px solid var(--neutral);
+	border-radius: 5px;
+	position: relative;
+	transition: 200ms all;
+	justify-content: center;
+	align-items: center;
+	display: flex;
 }
 
 .filter-buttons img {
-    width:100%;
-    height:100%;
-    object-fit: cover;
-    cursor:pointer;
-    filter:grayscale(0);
-    transition:200ms all
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	cursor: pointer;
+	transition: 200ms all
 }
 
-.filter-buttons input + label:before {
-    content:"";
-    position:absolute;
-    left:0;
-    top:0;
-    background:var(--neutralDark);
-    display: flex;
-    width:100%;
-    height:100%;
-    opacity: 0;
-    z-index: 1
+.filter-buttons input+label:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: var(--neutralDark);
+	display: flex;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	z-index: 1
 }
 
-.filter-buttons input:checked + label:before {
-    opacity: 0.75;
+.filter-buttons input:checked+label:before,
+.filter-buttons input+label:hover:before {
+	opacity: 0.75;
 }
 
-.filter-buttons input + label:after {
-    content:"\f5a2";
-    font-family: boxicons;
-    position:absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 40px;
-    opacity: 0;
-    z-index: 2;
-    text-shadow: 0 0 2px;
-    transition: 200ms all;
-    color:var(--textColorAccent);
+.filter-buttons input+label:after {
+	content: "\f5a2";
+	font-family: boxicons;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 40px;
+	opacity: 0;
+	z-index: 2;
+	text-shadow: 0 0 2px;
+	transition: 200ms all;
+	color: var(--textColorAccent);
 }
 
-.filter-buttons input:checked + label:after {
-    opacity: 1;
+.filter-buttons input+label:hover:after {
+	color: var(--textColor)
+}
+
+.filter-buttons input:checked+label:after,
+.filter-buttons input+label:hover:after {
+	opacity: 1;
 }
 
 .playlist iframe {
-    width:100%;
+	width: 100%;
+	border-radius: 5px;
+	margin: 0;
+	padding: 0;
+}
+
+.linkonglet {
+	display: none;
+	background: var(--neutralDark);
+	color: var(--textColor);
+	position: relative;
+	flex-direction: column;
+	border-radius: 5px;
+}
+
+.playlist x {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     border-radius: 5px;
     margin: 0;
     padding: 0;
-    border:10px solid var(--neutral);
+    border: 10px solid var(--neutral);
+    overflow: hidden;
+    height:335px;
+}
+
+.playlist x b2 {
+    position: absolute;
+    z-index: 2;
+    pointer-events: none;
+    transition: 200ms all;
+    opacity: 1
+}
+
+.playlist x:hover b2 {
+    opacity: 0;
+}
+
+.playlist x tw {
+    width: 100%;
+    filter:blur(10px) brightness(0.1);
+}
+
+.playlist x tw:hover {
+    filter:blur(0)
+}
+
+.playlist x iframe {
+    border:0;
 }
 
 
-.linkonglet {
-            display: none;
-            background: var(--neutralDark);
-            color: var(--textColor);
-            position: relative;
-            flex-direction: column;
-            border-radius: 5px;
-        }
-
 .playlist {
-        &:has(#link1:checked) .linkonglet#link1, &:has(#link2:checked) .linkonglet#link2, &:has(#link3:checked) .linkonglet#link3, &:has(#link4:checked) .linkonglet#link4, &:has(#link5:checked) .linkonglet#link5 {
-            display: flex!important;
-        }
-    }
+	&:has(#link1: checked) .linkonglet#link1, &:has(#link2:checked) .linkonglet#link2, &:has(#link3:checked) .linkonglet#link3, &:has(#link4:checked) .linkonglet#link4, &:has(#link5:checked) .linkonglet#link5 {
+		display: flex!important;
+	}
+}

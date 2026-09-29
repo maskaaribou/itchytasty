@@ -56,14 +56,14 @@
 		object-position: 0 38%;
 		border-radius: 5px;
 	}
-	.post_rank {
+	.uid .post_rank {
 		text-align: center;
 		width: 100%;
 		display: block;
 		background: var(--neutral);
 		border-radius: 5px;
 		padding: 1px 3px 5px;
-    	font-weight: 10px!important;
+    	font-size: 10px!important;
 		i2 {
 			margin: 0;
 			text-transform: uppercase;
@@ -82,32 +82,12 @@
 			overflow: hidden;
 		}
 	}
-	.signamad .post_rank {
-		text-align: center;
-		width: 100%;
-		display: block;
-		background: var(--neutral);
-		border-radius: 5px;
-		padding: 1px 3px 5px;
-		i2 {
-			margin: 0;
-		}
-		soustf3 {
-			margin: 0 0 0 3px
-		}
-		b2 {
-			display: inline-flex;
-			height: 21px;
-			width: 21px;
-			padding: 3px 0 0;
-			margin: 0;
-			justify-content: center;
-			align-items: center;
-			line-height: 100%;
-			overflow: hidden;
-			font-size: 15px
-		}
-	}
+
+
+
+
+
+	
 	.contents {
 		text-wrap: pretty;
 	}

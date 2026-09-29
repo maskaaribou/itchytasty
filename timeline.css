@@ -69,7 +69,7 @@
 
 #timeline .chrono lst {
 	display: flex;
-	flex-direction: column-reverse;
+	flex-direction: column;
 	width: 100%;
 }
 
@@ -84,7 +84,7 @@
 
 #timeline:has(input[id="croissant"]:checked) h .chrono lst,
 #timeline:has(input[id="croissant"]:checked) h .chrono lst k {
-	flex-direction: column;
+	flex-direction: column-reverse;
 }
 
 #timeline .chrono titre {
@@ -105,7 +105,7 @@
 
 #timeline .chrono lst k {
 	display: flex;
-	flex-direction: column-reverse;
+	flex-direction: column;
 	gap: 10px;
 }
 

@@ -11,13 +11,13 @@
 	    --accentClr:#844D63;
 	    --italic2:#BD716B;
 	}
-	.infos-posteur:nth-of-type(3)>span:not(.profil_label):after {
+	.other .infos-posteur:nth-of-type(3)>span:not(.profil_label):after {
 		content: "• Contexte militaire / policier \a • Dépression \a • Deuil \a • Relation age gap (7 ans d'écart) \a • Rupture";
 		font-size: 13px;
 		white-space: pre-wrap;
         display: inline-block;
 	}
-	.infos-posteur:nth-of-type(6)>span:not(.profil_label):after {
+	.other .infos-posteur:nth-of-type(6)>span:not(.profil_label):after {
 		content: "• FC: Jon Bernthal \a • Avatar: @Maskaaribou \a • Codes: @Maskaaribou";
 		font-size: 13px;
 		white-space: pre-wrap;
@@ -30,13 +30,13 @@
     	--accentClr:#93afb1;
     	--italic2:#a0b197;
 	}
-	.infos-posteur:nth-of-type(3)>span:not(.profil_label):after {
+	.other .infos-posteur:nth-of-type(3)>span:not(.profil_label):after {
 		content: "• Blessures \a • Dépression \a • Deuil";
 		font-size: 13px;
 		white-space: pre-wrap;
         display: inline-block;
 	}
-	.infos-posteur:nth-of-type(6)>span:not(.profil_label):after {
+	.other .infos-posteur:nth-of-type(6)>span:not(.profil_label):after {
 		content: "• FC: Taylor Hickson \a • Avatar: @Maskaaribou \a • Codes: @Maskaaribou";
 		font-size: 13px;
 		white-space: pre-wrap;

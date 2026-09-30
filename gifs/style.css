@@ -131,15 +131,15 @@ body {
 /* RESULTS */
 
 .results {
-	display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-	
-    background:#121218;
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    background: #121218;
     border-radius: 5px;
     padding: 20px;
+    justify-items: center;
+    align-items: center;
 }
 
 .gif-card {

@@ -150,6 +150,12 @@ body {
 	background: #211e1f;
 	width:268px;
     filter: grayscale(0);
+	width:180px;
+    transition: 200ms all;
+}
+
+.gif-card:hover {
+    width:265px;
 }
 
 .gif-card:after {
@@ -185,8 +191,8 @@ body {
 
 .gif-image {
 	display: block;
-	width: 268px;
-	height: 150px;
+	width: 100%;
+	height: auto;
 	object-fit: cover;
 	background: #191718;
     transition: 200ms all;

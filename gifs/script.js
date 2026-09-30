@@ -9,7 +9,7 @@ const CATEGORIES = [
     "Action"
 ];
 
-const GIFS_PER_PAGE = 36;
+const GIFS_PER_PAGE = 30;
 
 let gifs = [];
 let filteredGifs = [];

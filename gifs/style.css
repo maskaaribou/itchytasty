@@ -150,12 +150,7 @@ body {
 	background: #211e1f;
 	width:268px;
     filter: grayscale(0);
-	width:180px;
-    transition: 200ms all;
-}
-
-.gif-card:hover {
-    width:265px;
+	width:100%;
 }
 
 .gif-card:after {

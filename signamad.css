@@ -96,7 +96,7 @@
 		object-position: 0 38%;
 		border-radius: 5px;
 	}
-	.uid .post_rank {
+	.uid .post_rank:has(u) {
 		text-align: center;
 		width: 235px;
 		display: block;

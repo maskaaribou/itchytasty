@@ -7,34 +7,35 @@
 
 .post:has(.signamad.david) {
 	.post_rank {
-	    --accentClrDark: #844D63;
-	    --accentClr:#844D63;
-	    --italic2:#BD716B;
+		--accentClrDark: #844D63;
+		--accentClr: #844D63;
+		--italic2: #BD716B;
 	}
 	.other .infos-posteur:nth-of-type(3)>span:not(.profil_label):after {
 		content: "• Contexte militaire / policier \a • Dépression \a • Deuil \a • Relation age gap (7 ans d'écart) \a • Rupture";
 		font-size: 13px;
 		white-space: pre-wrap;
-        display: inline-block;
+		display: inline-block;
 	}
 	.other .infos-posteur:nth-of-type(6)>span:not(.profil_label):after {
 		content: "• FC: Jon Bernthal \a • Avatar: @Maskaaribou \a • Codes: @Maskaaribou";
 		font-size: 13px;
 		white-space: pre-wrap;
 		display: inline-block;
-	}	
+	}
 }
+
 .post:has(.signamad.hope) {
 	.post_rank {
-    	--accentClrDark: #93afb1;
-    	--accentClr:#93afb1;
-    	--italic2:#a0b197;
+		--accentClrDark: #93afb1;
+		--accentClr: #93afb1;
+		--italic2: #a0b197;
 	}
 	.other .infos-posteur:nth-of-type(3)>span:not(.profil_label):after {
 		content: "• Blessures \a • Dépression \a • Deuil";
 		font-size: 13px;
 		white-space: pre-wrap;
-        display: inline-block;
+		display: inline-block;
 	}
 	.other .infos-posteur:nth-of-type(6)>span:not(.profil_label):after {
 		content: "• FC: Taylor Hickson \a • Avatar: @Maskaaribou \a • Codes: @Maskaaribou";
@@ -43,9 +44,10 @@
 		display: inline-block;
 	}
 }
+
 .post:has(.signamad) {
 	.cadrepseudop {
-		z-index:4
+		z-index: 4
 	}
 	.post_message {
 		display: flex;
@@ -96,31 +98,93 @@
 	}
 	.uid .post_rank {
 		text-align: center;
-		width: 100%;
+		width: 235px;
 		display: block;
 		background: var(--neutral);
 		border-radius: 5px;
 		padding: 3px;
-    	font-size: 10px!important;
+		font-size: 9px!important;
+		margin-left: -8px;
+		span {
+			display: flex;
+			flex-wrap: nowrap;
+			width: 100%;
+			font-family: 'Geist Mono';
+			justify-items: center;
+			align-items: center;
+			height: 31px;
+			font-size: 9px !important;
+			padding: 3px 0;
+		}
+		i {
+			flex: 1;
+			text-align: left;
+			position: relative;
+			font-style: normal!important;
+			text-align: justify;
+			text-align-last: justify;
+		}
+		i:nth-of-type(1) {
+			text-align: right;
+		}
+		b {
+			display: none;
+		}
 		i2 {
 			margin: 0;
 			text-transform: uppercase;
-	        font-size:12px!important;
-	        letter-spacing: 1px;
-	        border-bottom: none;
-	        text-decoration: underline 2px var(--accentClr);
+			font-size: 9px!important;
+			letter-spacing: 1px;
+			border-bottom: none;
+			text-decoration: underline 1px var(--accentClr);
 		}
 		soustf3 {
-			margin: 0 0 0 3px;
-        	font-size:12px!important
+			margin: 0px;
+			font-size: 10px!important
 		}
 		b2 {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 15px;
+			padding: 0 3px 0 2px;
+			margin: 0 6px;
+			height: 100%;
+			position: relative;
+		}
+		i:nth-of-type(1):before,
+		i:nth-of-type(2) soustf3:after {
+			content: "·";
+			font-size: 9px!important;
+			margin: 0 5px;
+			color: var(--textColor);
+			text-shadow: none;
+			font-weight: bold;
+			letter-spacing: 0px!important;
+			font-style: normal!important;
+		}
+		i:nth-of-type(1) soustf3:before {
+			content: "· ─";
+			font-size: 9px!important;
+			margin: 0 5px;
+			color: var(--textColor);
+			text-shadow: none;
+			font-weight: bold;
+			font-style: normal!important;
+		}
+		i:nth-of-type(2):after {
+			content: "─ ·";
+			display: inline;
+			font-size: 9px!important;
+			margin: 0 5px;
+			color: var(--textColor);
+			text-shadow: none;
+			font-weight: bold;
+		}
+		u {
 			display: block;
-			height: 0;
-			overflow: hidden;
 		}
 	}
-
 	.signamad .post_rank {
 		text-align: center;
 		width: 100%;
@@ -128,19 +192,19 @@
 		background: var(--neutral);
 		border-radius: 5px;
 		padding: 3px;
-        letter-spacing: -1px;
-        font-family: 'Geist Mono';
+		letter-spacing: -1px;
+		font-family: 'Geist Mono';
 		text-transform: uppercase;
 		i2 {
 			margin: 0;
 			text-transform: uppercase;
-	        letter-spacing: 1px;
-	        border-bottom: none;
-	        text-decoration: underline 2px var(--accentClr);
+			letter-spacing: 1px;
+			border-bottom: none;
+			text-decoration: underline 2px var(--accentClr);
 		}
 		soustf3 {
 			margin: 0 0 0 3px;
-            font-size:15px!important;
+			font-size: 15px!important;
 		}
 		b2 {
 			display: inline-flex;
@@ -155,7 +219,6 @@
 			font-size: 15px
 		}
 	}
-	
 	.contents {
 		text-wrap: pretty;
 	}
@@ -164,7 +227,7 @@
 		display: flex;
 		flex-direction: column;
 		overflow-x: hidden !important;
-		&:has(.spoiler_content:not([hidden])) {
+		&:has(.spoiler_content: not([hidden])) {
 			overflow-y: hidden !important;
 		}
 		.infos-posteur {
@@ -173,7 +236,7 @@
 		.profil_label {
 			display: flex;
 			align-items: center;
-            margin: -9px 0 -5px;
+			margin: -9px 0 -5px;
 		}
 		/*STATS*/
 		.infos-posteur:nth-of-type(1) {
@@ -196,7 +259,7 @@
 			.profil_label {
 				display: none
 			}
-            .spoiler {
+			.spoiler {
 				margin: 0;
 				padding: 0;
 				width: 100%;
@@ -213,11 +276,11 @@
 				all: unset;
 				font-size: 0;
 				pointer-events: auto;
-                display: flex;
+				display: flex;
 			}
-            .spoiler:has([hidden]) .spoiler_title {
-                margin: 0 0 0 auto;
-            }
+			.spoiler:has([hidden]) .spoiler_title {
+				margin: 0 0 0 auto;
+			}
 			.spoiler_title:after {
 				content: "fermer";
 				cursor: pointer;
@@ -229,7 +292,7 @@
 				padding: 2px;
 				background: var(--neutralDarker);
 				border-radius: 3px;
-                flex:1;
+				flex: 1;
 			}
 			.spoiler:has([hidden]) .spoiler_title {
 				width: calc(50% - 1px);
@@ -243,11 +306,11 @@
 				height: 100%;
 				border-radius: 0;
 				padding: 0;
-				pointer-events:auto;
+				pointer-events: auto;
 			}
 			dd:has([hidden]) {
 				background: transparent;
-				pointer-events:none;
+				pointer-events: none;
 			}
 			.spoiler_content {
 				padding: 0 5px 0 0;
@@ -255,13 +318,13 @@
 				pointer-events: auto;
 				strong {
 					font-weight: 600;
-                    font-size: 13px;
-                    text-transform: uppercase;
-                    color: var(--accentClrDark);
-                    font-family: 'Rakkas';
-                    letter-spacing: 1px;
-                    margin: 0 0 -20px;
-                    display: block;
+					font-size: 13px;
+					text-transform: uppercase;
+					color: var(--accentClrDark);
+					font-family: 'Rakkas';
+					letter-spacing: 1px;
+					margin: 0 0 -20px;
+					display: block;
 				}
 				u {
 					color: var(--italic2);
@@ -270,16 +333,16 @@
 					gap: 5px;
 					align-items: center;
 					box-shadow: none;
-                    text-transform: uppercase;
-                    font-family: 'Geist Mono';
-                    font-size: 9px;
-                    text-decoration: none;
-                    margin: 2px 0 -5px;
-                }
+					text-transform: uppercase;
+					font-family: 'Geist Mono';
+					font-size: 9px;
+					text-decoration: none;
+					margin: 2px 0 -5px;
+				}
 				u+br,
 				br:has(+u),
-                ul+br,
-                ul br {
+				ul+br,
+				ul br {
 					display: none
 				}
 				u:before {
@@ -288,21 +351,21 @@
 					font-weight: 100;
 					font-size: 11px
 				}
-                ul {
-                    margin: 5px 0 0;
-                    padding: 0;
-                }
-                ul li {
-                    display: flex;
-                    gap:4px;
-                    justify-content: space-between;
-                }
-                ul li:before {
-                    content:"• "
-                }
-                ul li i {
-                    flex:1;
-                }
+				ul {
+					margin: 5px 0 0;
+					padding: 0;
+				}
+				ul li {
+					display: flex;
+					gap: 4px;
+					justify-content: space-between;
+				}
+				ul li:before {
+					content: "• "
+				}
+				ul li i {
+					flex: 1;
+				}
 			}
 		}
 		/*ÂGE*/
@@ -320,7 +383,7 @@
 		/*PIC*/
 		.infos-posteur:nth-of-type(6) {
 			order: 3;
-            margin: -315px 0 0;
+			margin: -315px 0 0;
 			img {
 				width: 100%;
 				height: 95px;
@@ -339,7 +402,7 @@
 		/*TRIVIA*/
 		.infos-posteur:nth-of-type(5) {
 			order: 1;
-            margin: 0;
+			margin: 0;
 			padding: 0;
 			width: 100%;
 			position: sticky;
@@ -374,7 +437,7 @@
 				all: unset;
 				font-size: 0;
 				pointer-events: auto;
-                display: flex;
+				display: flex;
 			}
 			.spoiler_title:after {
 				content: "fermer";
@@ -387,7 +450,7 @@
 				padding: 2px;
 				background: var(--neutralDarker);
 				border-radius: 3px;
-                flex:1;
+				flex: 1;
 			}
 			.spoiler:has([hidden]) .spoiler_title {
 				width: calc(50% - 1px);
@@ -401,11 +464,11 @@
 				height: 100%;
 				border-radius: 0;
 				padding: 0;
-				pointer-events:auto;
+				pointer-events: auto;
 			}
 			dd:has([hidden]) {
 				background: transparent;
-				pointer-events:none;
+				pointer-events: none;
 			}
 			.spoiler_content {
 				padding: 0 5px 0 0;
@@ -413,13 +476,13 @@
 				pointer-events: auto;
 				strong {
 					font-weight: 600;
-                    font-size: 13px;
-                    text-transform: uppercase;
-                    color: var(--accentClrDark);
-                    font-family: 'Rakkas';
-                    letter-spacing: 1px;
-                    margin: 0 0 -20px;
-                    display: block;
+					font-size: 13px;
+					text-transform: uppercase;
+					color: var(--accentClrDark);
+					font-family: 'Rakkas';
+					letter-spacing: 1px;
+					margin: 0 0 -20px;
+					display: block;
 				}
 				u {
 					color: var(--italic2);
@@ -428,12 +491,12 @@
 					gap: 5px;
 					align-items: center;
 					box-shadow: none;
-                    text-transform: uppercase;
-                    font-family: 'Geist Mono';
-                    font-size: 9px;
-                    text-decoration: none;
-                    margin: 2px 0 -5px;
-                }
+					text-transform: uppercase;
+					font-family: 'Geist Mono';
+					font-size: 9px;
+					text-decoration: none;
+					margin: 2px 0 -5px;
+				}
 				u+br,
 				br:has(+u) {
 					display: none
@@ -441,13 +504,12 @@
 			}
 		}
 	}
-    
 	.selected.other {
 		padding: 0;
 		display: flex;
 		flex-direction: column;
 		overflow-x: hidden !important;
-		&:has(.spoiler_content:not([hidden])) {
+		&:has(.spoiler_content: not([hidden])) {
 			overflow-y: hidden !important;
 		}
 		.infos-posteur {
@@ -456,13 +518,13 @@
 		.profil_label {
 			display: flex;
 			align-items: center;
-            margin: -9px 0 -5px;
+			margin: -9px 0 -5px;
 		}
-        .infos-posteur:nth-of-type(2),
-        .infos-posteur:nth-of-type(3),
-        .infos-posteur:nth-of-type(6) {
-            margin-bottom:0px;
-        }
+		.infos-posteur:nth-of-type(2),
+		.infos-posteur:nth-of-type(3),
+		.infos-posteur:nth-of-type(6) {
+			margin-bottom: 0px;
+		}
 		.infos-posteur:nth-of-type(2)>span:not(.profil_label),
 		.infos-posteur:nth-of-type(3)>span:not(.profil_label),
 		.infos-posteur:nth-of-type(6)>span:not(.profil_label) {
@@ -475,14 +537,14 @@
 			content: "• Abus et crimes sexuels \a • Décès d’un parent ou d'un animal (surtout IRL, toléré inRP si juste mentionné) \a • Procédures médicales en détail (injections & piqûres notamment) \a • Relations avec rapport de force ou de pouvoir";
 			font-size: 13px;
 			white-space: pre-wrap;
-            display: inline-block;
+			display: inline-block;
 		}
 		.infos-posteur:nth-of-type(7) {
 			margin: 5px 0 25px
 		}
-        /*PARTIE RP*/
-        .infos-posteur:nth-of-type(8) {
-            order: -1;
+		/*PARTIE RP*/
+		.infos-posteur:nth-of-type(8) {
+			order: -1;
 			margin: 0;
 			padding: 0;
 			width: 100%;
@@ -516,7 +578,7 @@
 				all: unset;
 				font-size: 0;
 				pointer-events: auto;
-                display: flex;
+				display: flex;
 			}
 			.spoiler_title:after {
 				content: "fermer";
@@ -529,7 +591,7 @@
 				padding: 2px;
 				background: var(--neutralDarker);
 				border-radius: 3px;
-                flex:1;
+				flex: 1;
 			}
 			.spoiler:has([hidden]) .spoiler_title:after {
 				content: "liste des rps"
@@ -540,25 +602,25 @@
 				height: 100%;
 				border-radius: 0;
 				padding: 0;
-				pointer-events:auto;
+				pointer-events: auto;
 			}
 			dd:has([hidden]) {
 				background: transparent;
-				pointer-events:none;
-			}            
+				pointer-events: none;
+			}
 			.spoiler_content {
 				padding: 0 5px 0 0;
 				background: var(--neutral);
 				pointer-events: auto;
 				strong {
 					font-weight: 600;
-                    font-size: 13px;
-                    text-transform: uppercase;
-                    color: var(--accentClrDark);
-                    font-family: 'Rakkas';
-                    letter-spacing: 1px;
-                    margin: 0 0 -20px;
-                    display: block;
+					font-size: 13px;
+					text-transform: uppercase;
+					color: var(--accentClrDark);
+					font-family: 'Rakkas';
+					letter-spacing: 1px;
+					margin: 0 0 -20px;
+					display: block;
 				}
 				u {
 					color: var(--italic2);
@@ -567,19 +629,19 @@
 					gap: 5px;
 					align-items: center;
 					box-shadow: none;
-                    text-transform: uppercase;
-                    font-family: 'Geist Mono';
-                    font-size: 9px;
-                    text-decoration: none;
-                    margin: 2px 0 -5px;
-                }
+					text-transform: uppercase;
+					font-family: 'Geist Mono';
+					font-size: 9px;
+					text-decoration: none;
+					margin: 2px 0 -5px;
+				}
 				u+br,
 				br:has(+u),
 				i+br,
 				i+br+br,
 				a+br,
-                ul+br,
-                ul br {
+				ul+br,
+				ul br {
 					display: none
 				}
 				i {
@@ -593,29 +655,27 @@
 				i:before {
 					content: "└ "
 				}
-                
 				a {
 					display: block;
 					width: 100%;
 					text-overflow: ellipsis;
 					white-space: nowrap;
 					overflow: hidden;
-                    
-                    color: var(--italic2);
+					color: var(--italic2);
 					font-weight: 600;
 					display: flex;
 					gap: 5px;
 					align-items: center;
 					box-shadow: none;
-                    text-transform: uppercase;
-                    font-family: 'Geist Mono';
-                    font-size: 10px;
-                    text-decoration: none;
-                    margin: 2px 0 -5px;
-                    transition: 200ms all;
+					text-transform: uppercase;
+					font-family: 'Geist Mono';
+					font-size: 10px;
+					text-decoration: none;
+					margin: 2px 0 -5px;
+					transition: 200ms all;
 				}
 				a:hover {
-                    color: var(--accentClr);
+					color: var(--accentClr);
 					text-align: justify;
 					text-overflow: unset;
 					white-space: wrap;
@@ -623,24 +683,24 @@
 				a:before {
 					content: "• ";
 				}
-                ul {
-                    margin: 0;
-                    padding: 0;
-                }
-                ul li {
-                    display: flex;
-                    gap:4px;
-                }
-                ul li:before {
-                    content:"• "
-                }
-                ul li i {
-                    flex:1;
-                }
-                ul li i:before {
-                    content:"";
-                }
+				ul {
+					margin: 0;
+					padding: 0;
+				}
+				ul li {
+					display: flex;
+					gap: 4px;
+				}
+				ul li:before {
+					content: "• "
+				}
+				ul li i {
+					flex: 1;
+				}
+				ul li i:before {
+					content: "";
+				}
 			}
-        } 
-    }
+		}
+	}
 }

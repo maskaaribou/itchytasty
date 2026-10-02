@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poltawski+Nowy:ital,wght@0,400..700;1,400..700&display=swap');
+
 .post.post_row:has(.signamad),
 #preview:has(.signamad),
 .post.post_row:has(.signamina),
@@ -158,7 +160,7 @@
 		font-size: 13px;
 		letter-spacing: 1px;
 		line-height: 150%;
-		font-family: "Playfair Display";
+		font-family: "Poltawski Nowy";
 		font-style: italic;
 		height: 100%;
 	}
@@ -205,9 +207,10 @@
 	.postrpmad m rp {
 		display: block;
 		padding: 20px;
-		font-family: "Playfair Display";
+		font-family: "Poltawski Nowy";
 		font-size:15px;
 		text-shadow: 1px 1px 0px var(--neutralDark);
+		text-wrap:pretty;
 	}
 	.postrpmad rp b,
 	.postrpmad rp strong {

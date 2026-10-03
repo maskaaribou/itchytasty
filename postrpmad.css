@@ -4,7 +4,8 @@
 .post.post_row:has(.signamad),
 #preview:has(.signamad),
 .post.post_row:has(.signamina),
-#preview:has(.signamina) {
+#preview:has(.signamina),
+.wrapped .postbody .content {
 	.postrpmad.david {
 		--light: #844D63;
 		--color: #BD716B;

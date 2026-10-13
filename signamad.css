@@ -32,7 +32,7 @@
 		--italic2: #a0b197;
 	}
 	.other .infos-posteur:nth-of-type(3)>span:not(.profil_label):after {
-		content: "• Blessures \a • Dépression \a • Deuil";
+		content: "• Blessures \a • Dépression \a • Détresse \a • Douleur";
 		font-size: 13px;
 		white-space: pre-wrap;
 		display: inline-block;

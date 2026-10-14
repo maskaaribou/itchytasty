@@ -227,7 +227,7 @@
 		display: flex;
 		flex-direction: column;
 		overflow-x: hidden !important;
-		&:has(.spoiler_content: not([hidden])) {
+		&:has(.spoiler_content:not([hidden])) {
 			overflow-y: hidden !important;
 		}
 		.infos-posteur {
@@ -236,7 +236,7 @@
 		.profil_label {
 			display: flex;
 			align-items: center;
-			margin: -9px 0 -5px;
+			margin: -13px 0 -6px;
 		}
 		/*STATS*/
 		.infos-posteur:nth-of-type(1) {
@@ -250,8 +250,18 @@
 			flex-shrink: 0;
 			overflow: hidden;
 			pointer-events: none;
-			background: var(--neutralDark);
+			background: var(--neutralDarker);
 			z-index: 99;
+			div:has(img) {
+				display: flex;
+				justify-content: space-between;
+				position: absolute;
+				width: 100%;
+				height: 50px;
+				img {
+					object-fit: cover;
+				}
+			}
 			&:has([hidden]) {
 				background: transparent;
 				z-index: 2
@@ -345,12 +355,6 @@
 				ul br {
 					display: none
 				}
-				u:before {
-					font-style: normal;
-					font-family: "Font Awesome 7 Sharp";
-					font-weight: 100;
-					font-size: 11px
-				}
 				ul {
 					margin: 5px 0 0;
 					padding: 0;
@@ -370,34 +374,38 @@
 		}
 		/*ÂGE*/
 		.infos-posteur:nth-of-type(2) {
-			order: 4;
+			order: 3;
+			margin: -252px 0 6px;
 		}
 		/*OCCUPATION*/
 		.infos-posteur:nth-of-type(3) {
-			order: 5;
+			order: 4;
 		}
 		/*SHIP*/
 		.infos-posteur:nth-of-type(4) {
-			order: 6;
+			order: 5;
 		}
 		/*PIC*/
 		.infos-posteur:nth-of-type(6) {
-			order: 3;
-			margin: -315px 0 0;
+			order: 8;
+			margin: 0;
+			.profil_label {
+				display: none;
+			}
 			img {
 				width: 100%;
-				height: 95px;
+				height: 85px;
 				object-fit: cover;
 				object-position: center;
 			}
 		}
 		/*GROUPE*/
 		.infos-posteur:nth-of-type(7) {
-			order: 7;
+			order: 6;
 		}
 		/*CLASSE*/
 		.infos-posteur:nth-of-type(8) {
-			order: 8;
+			order: 7;
 		}
 		/*TRIVIA*/
 		.infos-posteur:nth-of-type(5) {
@@ -509,7 +517,7 @@
 		display: flex;
 		flex-direction: column;
 		overflow-x: hidden !important;
-		&:has(.spoiler_content: not([hidden])) {
+		&:has(.spoiler_content:not([hidden])) {
 			overflow-y: hidden !important;
 		}
 		.infos-posteur {

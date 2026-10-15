@@ -618,6 +618,9 @@
 /***** PERSONNALISATION *****/
 
 .post:has(.signamina.roxanne) {
+	.selected.rpg .infos-posteur:nth-of-type(6) img {
+        height: 88px;
+    }
     .signamina {
 		--light: #EFC88E;
 		--color: #6EB1A7;

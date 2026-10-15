@@ -1,18 +1,87 @@
-@import url("https://kit-pro.fontawesome.com/releases/v7.3.1/css/pro.min.css");
+/***** RANG *****/
+
+.post:has(.signamina) .uid .post_rank:has(i2) {
+	i2 {margin: 0;}
+	soustf3 {margin: 0 0 0 3px}
+	b2 {padding: 1px 10px 0;line-height: 120%}
+}
+
+
+
+/***** SIGNATURE *****/
+
+.post:has(.signamina) .post_message {
+	.signature_div>br {
+		display: none;
+	}
+	.signamina {
+		display: flex;
+		margin: 0 auto -10px auto!important;
+		width: max-content;
+		gap: 10px;
+		flex-direction: row!important;
+		align-items: center;
+		border-radius: 5px;
+		padding: 10px;
+		background: var(--neutralDark);
+		pic {
+			background-size: cover;
+			width: 100px;
+			height: 100px;
+			display: flex;
+			border-radius: 5px;
+		}
+        r {
+            display: block;
+            height:max-content;
+            font-size: 14px!important;
+            color:var(--white);
+        }
+        r * {
+            font-size: 14px!important;
+        }
+        r b2 {
+            padding:1px 5px 0;line-height: 120%;
+            background:var(--color);
+        }
+        r i2 {
+            margin: 0;
+            border-bottom: 2px solid var(--color);
+            color:var(--light);
+        }
+        soustf3 {
+            color:var(--color)
+        }
+        i3 {
+            color:var(--light)
+        }
+        em {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            font-size:25px!important;
+            color: transparent;
+            background-clip: text;
+            background-image: linear-gradient(180deg, var(--color), var(--light));
+        }
+	}
+}
+
+
+/***** PROFIL *****/
+
 .post:has(.signamina) {
-    .post_rank {
-        i2 {margin: 0;}
-        soustf3 {margin: 0 0 0 3px}
-        b2 {padding:1px 10px 0;line-height: 120%}
-    }
 	.contents {
 		text-wrap: pretty;
+		background: var(--neutralDarker);
+		border-radius: 3px;
 	}
 	.selected.rpg {
 		padding: 0;
 		display: flex;
 		flex-direction: column;
 		overflow-x: hidden !important;
+		background: var(--neutral);
 		&:has(.spoiler_content:not([hidden])) {
 			overflow-y: hidden !important;
 		}
@@ -20,23 +89,20 @@
 			padding: 0 0 0 0;
 		}
 		.profil_label {
-			display: flex;
-			align-items: center;
-            margin: -9px 0 -5px;
+			display: block;
 		}
-		/*STATS*/
-		.infos-posteur:nth-of-type(1) {
-			order: 2;
-			margin: -320px 0 0;
+		/*TRIVIA*/
+		.infos-posteur:nth-of-type(5) {
+			order: 1;
+			margin: 0;
 			padding: 0;
 			width: 100%;
 			position: sticky;
 			top: 0;
-			height: 320px;
+			height: 400px;
 			flex-shrink: 0;
 			overflow: hidden;
 			pointer-events: none;
-			background: var(--neutralDark);
 			z-index: 99;
 			&:has([hidden]) {
 				background: transparent;
@@ -45,7 +111,7 @@
 			.profil_label {
 				display: none
 			}
-            .spoiler {
+			.spoiler {
 				margin: 0;
 				padding: 0;
 				width: 100%;
@@ -53,7 +119,6 @@
 				flex-direction: column-reverse;
 				gap: 5px;
 				height: 100%;
-				background: var(--neutral);
 			}
 			.spoiler:has([hidden]) {
 				background: transparent;
@@ -62,23 +127,142 @@
 				all: unset;
 				font-size: 0;
 				pointer-events: auto;
-                display: flex;
+				display: flex;
+				background: transparent;
+				padding: 0;
 			}
-            .spoiler:has([hidden]) .spoiler_title {
-                margin: 0 0 0 auto;
-            }
+			.spoiler:has([hidden]) .spoiler_title {
+				margin: 0 auto 0 0;
+			}
 			.spoiler_title:after {
 				content: "fermer";
 				cursor: pointer;
 				text-align: center;
-				font-size: 10px !important;
+				font-size: 9px;
 				color: var(--textColor);
-				letter-spacing: 1px;
 				text-transform: uppercase !important;
 				padding: 2px;
 				background: var(--neutralDarker);
 				border-radius: 3px;
-                flex:1;
+				flex: 1;
+			}
+			.spoiler:has([hidden]) .spoiler_title {
+				width: calc(50% - 1.5px);
+			}
+			.spoiler:has([hidden]) .spoiler_title:after {
+				content: "trivia"
+			}
+			dd {
+				flex: 1;
+				overflow: auto;
+				height: 100%;
+				border-radius: 5px 0 0 5px;
+				padding: 0;
+				pointer-events: auto;
+			}
+			dd:has([hidden]) {
+				background: transparent;
+				pointer-events: none;
+			}
+			.spoiler_content {
+				padding:2px 5px 3px;
+				background: var(--neutralDarker);
+				pointer-events: auto;
+				strong {
+					font-weight: 600;
+					font-size: 13px;
+					text-transform: uppercase;
+					color: var(--accentClrDark);
+					font-family: 'Rakkas';
+					letter-spacing: 1px;
+					margin: 0 0 -20px;
+					display: block;
+				}
+				u {
+					color: var(--italic2);
+					font-weight: 600;
+					display: flex;
+					gap: 5px;
+					align-items: center;
+					box-shadow: none;
+					text-transform: uppercase;
+					font-family: 'Geist Mono';
+					font-size: 9px;
+					text-decoration: none;
+					margin: 6px 0 -0px;
+				}
+				u+br,
+				br:has(+u) {
+					display: none
+				}
+			}
+		}
+		/*STATS*/
+		.infos-posteur:nth-of-type(1) {
+			order: 2;
+			margin: -400px 0 0;
+			padding: 0;
+			width: 100%;
+			position: sticky;
+			top: 0;
+			height: 400px;
+			overflow: hidden;
+			pointer-events: none;
+                min-height: 400px;
+			z-index: 99;
+			div:has(img) {
+				display: flex;
+				justify-content: space-between;
+				position: absolute;
+				width: 100%;
+				padding: 0 0 5px 0;
+				gap: 2px;
+				img {
+					object-fit: cover;
+					flex: 1;
+				}
+			}
+			&:has([hidden]) {
+				background: transparent;
+				z-index: 2
+			}
+			.profil_label {
+				display: none
+			}
+			.spoiler {
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				display: flex;
+				flex-direction: column-reverse;
+				gap: 5px;
+				height: 100%;
+			}
+			.spoiler:has([hidden]) {
+				background: transparent;
+			}
+			.spoiler_title {
+				all: unset;
+				font-size: 0;
+				pointer-events: auto;
+				display: flex;
+				background: transparent;
+				padding: 0;
+			}
+			.spoiler:has([hidden]) .spoiler_title {
+				margin: 0 0 0 auto;
+			}
+			.spoiler_title:after {
+				content: "fermer";
+				cursor: pointer;
+				text-align: center;
+				font-size: 9px;
+				color: var(--textColor);
+				text-transform: uppercase !important;
+				padding: 2px;
+				background: var(--neutralDarker);
+				border-radius: 3px;
+				flex: 1;
 			}
 			.spoiler:has([hidden]) .spoiler_title {
 				width: calc(50% - 1px);
@@ -90,28 +274,27 @@
 				flex: 1;
 				overflow: auto;
 				height: 100%;
-				border-radius: 0;
+				border-radius: 5px 0 0 5px;
 				padding: 0;
-				pointer-events:auto;
+				pointer-events: auto;
 			}
 			dd:has([hidden]) {
 				background: transparent;
-				pointer-events:none;
+				pointer-events: none;
 			}
 			.spoiler_content {
-				padding: 0 5px 0 0;
-				background: var(--neutral);
+				padding:2px 5px 3px;
+				background: var(--neutralDarker);
 				pointer-events: auto;
-                height:100%;
 				strong {
 					font-weight: 600;
-                    font-size: 13px;
-                    text-transform: uppercase;
-                    color: var(--accentClrDark);
-                    font-family: 'Rakkas';
-                    letter-spacing: 1px;
-                    margin: 0 0 -20px;
-                    display: block;
+					font-size: 13px;
+					text-transform: uppercase;
+					color: var(--accentClrDark);
+					font-family: 'Rakkas';
+					letter-spacing: 1px;
+					margin: 0 0 -20px;
+					display: block;
 				}
 				u {
 					color: var(--italic2);
@@ -120,457 +303,361 @@
 					gap: 5px;
 					align-items: center;
 					box-shadow: none;
-                    text-transform: uppercase;
-                    font-family: 'Geist Mono';
-                    font-size: 9px;
-                    text-decoration: none;
-                    margin: 2px 0 -5px;
-                }
+					text-transform: uppercase;
+					font-family: 'Geist Mono';
+					font-size: 9px;
+					text-decoration: none;
+					margin: 6px 0 -0px;
+				}
 				u+br,
 				br:has(+u),
-                ul+br,
-                ul br {
+				ul+br,
+				ul br {
 					display: none
 				}
-                ul {
-                    margin: 5px 0 0;
-                    padding: 0;
-                }
-                ul li {
-                    display: flex;
-                    gap:4px;
-                    justify-content: space-between;
-                }
-                ul li:before {
-                    content:"• "
-                }
-                ul li i {
-                    flex:1;
+				ul {
+					margin: 5px 0 0;
+					padding: 0;
+				}
+				ul li {
+					display: flex;
+					gap: 4px;
+					justify-content: space-between;
+                    align-items: center;
+                    font-weight: bold;
+				}
+				ul li:before {
+					content: "• ";
+                    font-weight: normal;
+				}
+				ul li i {
+					flex: 1;
+                    border-bottom: 1px dotted var(--neutral);
+                    height:10px;
+				}
+                ul li u {
+                    margin: 0;
                 }
 			}
 		}
 		/*ÂGE*/
 		.infos-posteur:nth-of-type(2) {
-			order: 4;
+			order: 3;
+			margin: -323px 0 0;
+			padding: 5px 5px 2px;
+			background: var(--neutralDarker);
+			border-radius: 3px 5px 0 0
 		}
 		/*OCCUPATION*/
 		.infos-posteur:nth-of-type(3) {
-			order: 5;
+			order: 4;
+			padding: 2px 5px;
+			background: var(--neutralDarker);
+			margin: 0;
 		}
 		/*SHIP*/
 		.infos-posteur:nth-of-type(4) {
-			order: 6;
+			order: 5;
+			padding: 2px 5px;
+			background: var(--neutralDarker);
+			margin: 0;
 		}
 		/*PIC*/
 		.infos-posteur:nth-of-type(6) {
-			order: 3;
-            margin: -315px 0 0;
+			order: 8;
+			margin: 0;
+			padding: 5px 0;
+			.profil_label {
+				display: none;
+			}
 			img {
 				width: 100%;
-				height: 95px;
+				height: 88px;
 				object-fit: cover;
 				object-position: center;
 			}
 		}
 		/*GROUPE*/
 		.infos-posteur:nth-of-type(7) {
-			order: 7;
+			order: 6;
+			padding: 2px 5px;
+			background: var(--neutralDarker);
+			margin: 0;
 		}
 		/*CLASSE*/
 		.infos-posteur:nth-of-type(8) {
-			order: 8;
-		}
-		/*TRIVIA*/
-		.infos-posteur:nth-of-type(5) {
-			order: 1;
-            margin: 0;
-			padding: 0;
-			width: 100%;
-			position: sticky;
-			top: 0;
-			height: 320px;
-			flex-shrink: 0;
-			overflow: hidden;
-			pointer-events: none;
-			background: var(--neutralDark);
-			z-index: 99;
-			&:has([hidden]) {
-				background: transparent;
-				z-index: 2
-			}
-			.profil_label {
-				display: none
-			}
-			.spoiler {
-				margin: 0;
-				padding: 0;
-				width: 100%;
-				display: flex;
-				flex-direction: column-reverse;
-				gap: 5px;
-				height: 100%;
-				background: var(--neutral);
-			}
-			.spoiler:has([hidden]) {
-				background: transparent;
-			}
-			.spoiler_title {
-				all: unset;
-				font-size: 0;
-				pointer-events: auto;
-                display: flex;
-			}
-			.spoiler_title:after {
-				content: "fermer";
-				cursor: pointer;
-				text-align: center;
-				font-size: 10px !important;
-				color: var(--textColor);
-				letter-spacing: 1px;
-				text-transform: uppercase !important;
-				padding: 2px;
-				background: var(--neutralDarker);
-				border-radius: 3px;
-                flex:1;
-			}
-			.spoiler:has([hidden]) .spoiler_title {
-				width: calc(50% - 1px);
-			}
-			.spoiler:has([hidden]) .spoiler_title:after {
-				content: "trivia"
-			}
-			dd {
-				flex: 1;
-				overflow: auto;
-				height: 100%;
-				border-radius: 0;
-				padding: 0;
-				pointer-events:auto;
-			}
-			dd:has([hidden]) {
-				background: transparent;
-				pointer-events:none;
-			}
-			.spoiler_content {
-				padding: 0 5px 0 0;
-				background: var(--neutral);
-				pointer-events: auto;
-				strong {
-					font-weight: 600;
-                    font-size: 13px;
-                    text-transform: uppercase;
-                    color: var(--accentClrDark);
-                    font-family: 'Rakkas';
-                    letter-spacing: 1px;
-                    margin: 0 0 -20px;
-                    display: block;
-				}
-				u {
-					color: var(--italic2);
-					font-weight: 600;
-					display: flex;
-					gap: 5px;
-					align-items: center;
-					box-shadow: none;
-                    text-transform: uppercase;
-                    font-family: 'Geist Mono';
-                    font-size: 9px;
-                    text-decoration: none;
-                    margin: 2px 0 -5px;
-                }
-				u+br,
-				br:has(+u) {
-					display: none
-				}
-			}
+			order: 7;
+			padding: 2px 5px;
+			background: var(--neutralDarker);
+			margin: 0;
+			border-radius: 0 0 5px 5px
 		}
 	}
-    
-	.selected.other {
-		padding: 0;
-		display: flex;
-		flex-direction: column;
-		overflow-x: hidden !important;
-		&:has(.spoiler_content:not([hidden])) {
-			overflow-y: hidden !important;
-		}
-		.infos-posteur {
-			padding: 0 5px 0 0;
-		}
-		.profil_label {
-			display: flex;
-			align-items: center;
-            margin: -9px 0 -5px;
-		}
-        .infos-posteur:nth-of-type(2),
-        .infos-posteur:nth-of-type(3),
-        .infos-posteur:nth-of-type(6) {
-            margin-bottom:0px;
-        }
-		.infos-posteur:nth-of-type(2)>span:not(.profil_label),
-		.infos-posteur:nth-of-type(3)>span:not(.profil_label),
-		.infos-posteur:nth-of-type(6)>span:not(.profil_label) {
-			font-size: 0;
-		}
-		.infos-posteur:nth-of-type(1) {
-			margin: -315px 0 5px;
-		}
-		.infos-posteur:nth-of-type(2)>span:not(.profil_label):after {
-			content: "• Self-harm \a • Suicide \a • Araignées \a • Validisme \a • Maltraitance Animale";
-			font-size: 13px;
-			white-space: pre-wrap;
-            display: inline-block;
-		}
-        .infos-posteur:nth-of-type(3)>span:not(.profil_label):after {
-			content: "• Validisme \a • Autisme \a • Age gap (7 ans) \a • Rupture";
-			font-size: 13px;
-			white-space: pre-wrap;
-            display: inline-block;
-		}
-        .infos-posteur:nth-of-type(6)>span:not(.profil_label):after {
-			content: "• FC: Deborah Ann Woll \a • Avatar: @Minafreya \a • Codes: @Maskaaribou";
-			font-size: 13px;
-			white-space: pre-wrap;
-            display: inline-block;
-		}
-		.infos-posteur:nth-of-type(7) {
-			margin: 5px 0 25px
-		}
-        /*PARTIE RP*/
-        .infos-posteur:nth-of-type(8) {
-            order: -1;
-			margin: 0;
-			padding: 0;
-			width: 100%;
-			position: sticky;
-			top: 0;
-			height: 320px;
-			flex-shrink: 0;
-			overflow: hidden;
-			pointer-events: none;
-			background: var(--neutralDark);
-			&:has([hidden]) {
-				background: transparent;
-			}
-			.profil_label {
-				display: none
-			}
-			.spoiler {
-				margin: 0;
-				padding: 0;
-				width: 100%;
-				display: flex;
-				flex-direction: column-reverse;
-				gap: 5px;
-				height: 100%;
-				background: var(--neutral);
-			}
-			.spoiler:has([hidden]) {
-				background: transparent;
-			}
-			.spoiler_title {
-				all: unset;
+    .selected.other {
+    	padding: 0;
+    	display: flex;
+    	flex-direction: column;
+    	overflow-x: hidden !important;
+        background: var(--neutral);
+    	&:has(.spoiler_content:not([hidden])) {
+    		overflow-y: hidden !important;
+    	}
+    	.infos-posteur {
+    		padding: 2px 5px;
+            background: var(--neutralDarker);
+            margin: 0;
+    	}
+    	.infos-posteur:nth-of-type(7) {
+    		padding: 2px 5px 25px
+    	}
+    	.profil_label {
+    		display: flex;
+    		align-items: center;
+    	}
+    	.infos-posteur:nth-of-type(2)>span:not(.profil_label),
+    	.infos-posteur:nth-of-type(3)>span:not(.profil_label),
+    	.infos-posteur:nth-of-type(6)>span:not(.profil_label) {
+    		font-size: 0;
+    	}
+    	.infos-posteur:nth-of-type(1) {
+    		margin: -400px 0 0;
+            padding: 5px 5px 2px;
+    	}
+    	.infos-posteur:nth-of-type(2)>span:not(.profil_label):after {
+    		content: "• Self-harm \a • Suicide \a • Araignées \a • Validisme \a • Maltraitance Animale";
+    		font-size: 13px;
+    		white-space: pre-wrap;
+    		display: inline-block;
+    	}
+    	/*PARTIE RP*/
+    	.infos-posteur:nth-of-type(8) {
+    		order: -1;
+    		margin: 0;
+    		padding: 0;
+    		width: 100%;
+    		position: sticky;
+    		top: 0;
+    		height: 400px;
+    		flex-shrink: 0;
+    		overflow: hidden;
+    		pointer-events: none;
+    		background: var(--neutralDarker);
+    		&:has([hidden]) {
+    			background: transparent;
+				z-index: 2
+    		}
+    		.profil_label {
+    			display: none
+    		}
+    		.spoiler {
+    			margin: 0;
+    			padding: 0;
+    			width: 100%;
+    			display: flex;
+    			flex-direction: column-reverse;
+    			gap: 5px;
+    			height: 100%;
+    		}
+    		.spoiler:has([hidden]) {
+    			background: transparent;
+    		}
+    		.spoiler_title {
+    			all: unset;
 				font-size: 0;
 				pointer-events: auto;
-                display: flex;
+				display: flex;
+				padding: 0;
+                background:#131318;
+                padding: 5px 0 0;
+    		}
+			.spoiler:has([hidden]) .spoiler_title {
+				margin: 0;
 			}
-			.spoiler_title:after {
-				content: "fermer";
+    		.spoiler_title:after {
+    			content: "fermer";
 				cursor: pointer;
 				text-align: center;
-				font-size: 10px !important;
+				font-size: 9px;
 				color: var(--textColor);
-				letter-spacing: 1px;
 				text-transform: uppercase !important;
 				padding: 2px;
 				background: var(--neutralDarker);
 				border-radius: 3px;
-                flex:1;
-			}
-			.spoiler:has([hidden]) .spoiler_title:after {
-				content: "liste des rps"
-			}
-			dd {
 				flex: 1;
-				overflow-y: auto;
+    		}
+    		.spoiler:has([hidden]) .spoiler_title:after {
+    			content: "liste des rps"
+    		}
+    		dd {
+    			flex: 1;
+				overflow: auto;
 				height: 100%;
-				border-radius: 0;
+				border-radius: 5px 0 0 5px;
 				padding: 0;
-				pointer-events:auto;
-			}
-			dd:has([hidden]) {
-				background: transparent;
-				pointer-events:none;
-			}
-            
-			.spoiler_content {
-				padding: 0 5px 0 0;
-				background: var(--neutral);
 				pointer-events: auto;
-				strong {
-					font-weight: 600;
-                    font-size: 13px;
-                    text-transform: uppercase;
-                    color: var(--accentClrDark);
-                    font-family: 'Rakkas';
-                    letter-spacing: 1px;
-                    margin: 0 0 -20px;
-                    display: block;
-				}
-				u {
-					color: var(--italic2);
-					font-weight: 600;
-					display: flex;
-					gap: 5px;
-					align-items: center;
-					box-shadow: none;
-                    text-transform: uppercase;
-                    font-family: 'Geist Mono';
-                    font-size: 9px;
-                    text-decoration: none;
-                    margin: 2px 0 -5px;
-                }
-				u+br,
-				br:has(+u),
-				i+br,
-				i+br+br,
-				a+br,
-                ul+br,
-                ul br {
-					display: none
-				}
-				i {
+    		}
+    		dd:has([hidden]) {
+    			background: transparent;
+    			pointer-events: none;
+    		}
+    		.spoiler_content {
+    			padding:2px 5px 3px;
+				background: var(--neutralDarker);
+				pointer-events: auto;
+                height:100%;
+    			strong {
+    				font-weight: 600;
+					font-size: 13px;
+					text-transform: uppercase;
+					color: var(--accentClrDark);
+					font-family: 'Rakkas';
+					letter-spacing: 1px;
+					margin: 0 0 -20px;
 					display: block;
-					margin: 0 0 5px;
-				}
-				i:last-of-type {
-					display: block;
-					margin: 0;
-				}
-				i:before {
-					content: "└ "
-				}
-                
-				a {
-					display: block;
-					width: 100%;
-					text-overflow: ellipsis;
-					white-space: nowrap;
-					overflow: hidden;
-                    
-                    color: var(--italic2);
+    			}
+    			u {
+    				color: var(--italic2);
 					font-weight: 600;
 					display: flex;
 					gap: 5px;
 					align-items: center;
 					box-shadow: none;
-                    text-transform: uppercase;
-                    font-family: 'Geist Mono';
-                    font-size: 10px;
-                    text-decoration: none;
-                    margin: 2px 0 -5px;
-                    transition: 200ms all;
-				}
-				a:hover {
-                    color: var(--accentClr);
-					text-align: justify;
-					text-overflow: unset;
-					white-space: wrap;
-				}
-				a:before {
-					content: "• ";
-				}
-                ul {
-                    margin: 0;
-                    padding: 0;
-                }
-                ul li {
-                    display: flex;
-                    gap:4px;
-                }
-                ul li:before {
-                    content:"• "
-                }
-                ul li i {
-                    flex:1;
-                }
-                ul li i:before {
-                    content:"";
-                }
-			}
-        } 
+					text-transform: uppercase;
+					font-family: 'Geist Mono';
+					font-size: 9px;
+					text-decoration: none;
+					margin: 6px 0 -0px;
+    			}
+    			u+br,
+    			br:has(+u),
+    			i+br,
+    			i+br+br,
+    			a+br,
+    			ul+br,
+    			ul br {
+    				display: none
+    			}
+    			i {
+    				display: block;
+    				margin: 5px 0;
+    			}
+    			i:last-of-type {
+    				display: block;
+    				margin: 5px 0 0;
+    			}
+    			i:before {
+    				content: "└ "
+    			}
+    			a {
+    				display: block;
+    				width: 100%;
+    				text-overflow: ellipsis;
+    				white-space: nowrap;
+    				overflow: hidden;
+    				color: var(--italic2);
+    				font-weight: 600;
+    				display: flex;
+    				gap: 5px;
+    				align-items: center;
+    				box-shadow: none;
+    				text-transform: uppercase;
+    				font-family: 'Geist Mono';
+    				font-size: 10px;
+    				text-decoration: none;
+    				margin: 2px 0 -5px;
+    				transition: 200ms all;
+    			}
+    			a:hover {
+    				color: var(--accentClr);
+    				text-align: justify;
+    				text-overflow: unset;
+    				white-space: wrap;
+    			}
+    			a:before {
+    				content: "• ";
+    			}
+    			ul {
+    				margin: 0;
+    				padding: 0;
+    			}
+    			ul li {
+    				display: flex;
+    				gap: 4px;
+    			}
+    			ul li:before {
+    				content: "• "
+    			}
+    			ul li i {
+    				flex: 1;
+    			}
+    			ul li i:before {
+    				content: "";
+    			}
+    		}
+    	}
     }
 }
 
+/* fix couleur */
 
-
-
-.signature_div:has(.signamina)> br {
-    display: none;
+[data-color-scheme="light"] .post:has(.signamina) .spoiler_title {
+	background: #323145!important;
 }
 
-.signamina {
-    display: flex;
-    margin: 0 auto -10px auto!important;
-    width: max-content;
-    gap:10px;
-    flex-direction: row!important;
-    align-items: center;
-    
-    --light: #EFC88E;
-    --color: #6EB1A7;
-    --white:#dadada;
-    border-radius: 5px;
-    padding: 10px;
-    background:var(--neutralDark)
+
+
+
+
+
+
+
+/***** PERSONNALISATION *****/
+
+.post:has(.signamina.roxanne) {
+    .signamina {
+		--light: #EFC88E;
+		--color: #6EB1A7;
+		--white: #dadada;
+    }
+    .signamina pic {
+			background-image: url(https://i.imgur.com/aoy2AI7.gif);
+			background-position: top center;
+	}
+	.other .infos-posteur:nth-of-type(3)>span:not(.profil_label):after {
+		content: "• Validisme \a • Autisme \a • Age gap (7 ans) \a • Rupture";
+		font-size: 13px;
+		white-space: pre-wrap;
+		display: inline-block;
+	}
+	.other .infos-posteur:nth-of-type(6)>span:not(.profil_label):after {
+		content: "• FC: Deborah Ann Woll \a • Avatar: @Minafreya \a • Codes: @Maskaaribou";
+		font-size: 13px;
+		white-space: pre-wrap;
+		display: inline-block;
+	}
 }
 
-.signamina pic {
-    background-image:url(https://i.imgur.com/aoy2AI7.gif);
-    background-size:cover;
-    background-position:top center;
-    width:100px;
-    height:100px;
-    display: flex;
-    border-radius: 5px;
-}
-
-.signamina r {
-    display: block;
-    height:max-content;
-    font-size: 14px!important;
-    color:var(--white);
-}
-
-.signamina r * {
-    font-size: 14px!important;
-}
-
-.signamina r b2 {
-    padding:1px 5px 0;line-height: 120%;
-    background:var(--color);
-}
-
-.signamina r i2 {
-    margin: 0;
-    border-bottom: 2px solid var(--color);
-    color:var(--light);
-}
-
-.signamina soustf3 {
-    color:var(--color)
-}
-
-.signamina i3 {
-    color:var(--light)
-}
-
-.signamina em {
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    font-size:25px!important;
-    color: transparent;
-    background-clip: text;
-    background-image: linear-gradient(180deg, var(--color), var(--light));
+.post:has(.signamina.willow) {
+    .signamina {
+		--light: #EFC88E;
+		--color: #6EB1A7;
+		--white: #dadada;
+        display: none;
+    }
+    .signamina pic {
+			background-image: url(https://i.imgur.com/aoy2AI7.gif);
+			background-position: top center;
+	}
+	.other .infos-posteur:nth-of-type(3)>span:not(.profil_label):after {
+		content: "• ???";
+		font-size: 13px;
+		white-space: pre-wrap;
+		display: inline-block;
+	}
+	.other .infos-posteur:nth-of-type(6)>span:not(.profil_label):after {
+		content: "• FC: Sadie Sink \a • Avatar: @Deathlyhallows25 \a • Codes: @Maskaaribou";
+		font-size: 13px;
+		white-space: pre-wrap;
+		display: inline-block;
+	}
 }

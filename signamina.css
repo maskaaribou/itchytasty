@@ -19,7 +19,7 @@
 	}
 	.signamina {
 		display: flex;
-		margin: 0 auto -10px auto!important;
+		margin: 0 auto 20px auto!important;
 		width: max-content;
 		gap: 10px;
 		flex-direction: row!important;

@@ -236,42 +236,54 @@
 		font-weight: bold;
 		letter-spacing: 1px;
 	}
+	.postrpmad rp pnj {
+		font-weight: bold;
+		letter-spacing: 1px;
+		color:var(--light);
+	}
 	.postrpmad rp d:has(en):hover,
 	.postrpmad rp r:has(en):hover,
 	.postrpmad rp w:has(en):hover,
-	.postrpmad rp h:has(en):hover {
+	.postrpmad rp h:has(en):hover,
+	.postrpmad rp pnj:has(en):hover {
 		cursor: help;
 	}
 	.postrpmad rp d:before,
 	.postrpmad rp r:before,
 	.postrpmad rp w:before,
-	.postrpmad rp h:before {
+	.postrpmad rp h:before,
+	.postrpmad rp pnj:before {
 		content: "« "
 	}
 	.postrpmad rp d:after,
 	.postrpmad rp r:after,
 	.postrpmad rp w:after,
-	.postrpmad rp h:after {
+	.postrpmad rp h:after,
+	.postrpmad rp pnj:after {
 		content: " »"
 	}
 	.postrpmad rp d en,
 	.postrpmad rp r en,
 	.postrpmad rp w en,
 	.postrpmad rp h en,
+	.postrpmad rp pnj en,
 	.postrpmad rp d:hover fr,
 	.postrpmad rp r:hover fr,
 	.postrpmad rp w:hover fr,
-	.postrpmad rp h:hover fr {
+	.postrpmad rp h:hover fr,
+	.postrpmad rp pnj:hover fr {
 		display: inline;
 	}
 	.postrpmad rp d fr,
 	.postrpmad rp r fr,
 	.postrpmad rp w fr,
 	.postrpmad rp h fr,
+	.postrpmad rp pnj fr,
 	.postrpmad rp d:hover en,
 	.postrpmad rp r:hover en,
 	.postrpmad rp w:hover en,
-	.postrpmad rp h:hover en {
+	.postrpmad rp h:hover en,
+	.postrpmad rp pnj:hover en {
 		display: none;
 	}
 	.postrpmad info {

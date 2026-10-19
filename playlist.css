@@ -10,10 +10,13 @@
 }
 
 .filter-buttons {
-	display: flex;
-	justify-content: space-between;
-	margin: 0 0 10px;
-	gap: 10px;
+	display: grid;
+    margin: 0 0 10px;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(5, auto);
 }
 
 .playlist input {

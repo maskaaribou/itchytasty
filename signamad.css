@@ -779,6 +779,9 @@
 		content: url(https://i.imgur.com/hgpRKqJ.gif);
 		object-position: 0 35%;
 	}
+	.signamad .post_rank b2:after {
+	    content:"\1F327"
+	}
 	.other .infos-posteur:nth-of-type(3)>span:not(.profil_label):after {
 		content: "• Blessures \a • Dépression \a • Détresse";
 		font-size: 13px;

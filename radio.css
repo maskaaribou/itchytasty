@@ -173,12 +173,11 @@
   align-items: baseline;
   margin-top: 8px;
   font-size: 8px;
-  text-transform: uppercase;
   letter-spacing: 1px;
 }
-.rad .f::before { content: "fréquence"; opacity: .7; }
+.rad .f::before { content: "fréquence"; opacity: .7; text-transform: uppercase;}
 .rad .f::after {
-  content: counter(ent) "." counter(dec, decimal-leading-zero) " mhz";
+  content: counter(ent) "." counter(dec, decimal-leading-zero) " MHz";
   font-weight: 600;
   font-size: 13px;
   text-shadow: 0 0 1px;

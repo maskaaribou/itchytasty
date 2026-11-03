@@ -1,0 +1,306 @@
+/* ===== RADIO ===== */
+
+/* désynchro signal */
+.post_row:nth-of-type(6n+1) .rad { --d: 0s; }
+.post_row:nth-of-type(6n+2) .rad { --d: -3.5s; }
+.post_row:nth-of-type(6n+3) .rad { --d: -7s; }
+.post_row:nth-of-type(6n+4) .rad { --d: -1.5s; }
+.post_row:nth-of-type(6n+5) .rad { --d: -5s; }
+.post_row:nth-of-type(6n)   .rad { --d: -8.5s; }
+.post_row:nth-of-type(3n+1) .rad { --u: 9s; }
+.post_row:nth-of-type(3n+2) .rad { --u: 11s; }
+.post_row:nth-of-type(3n)   .rad { --u: 13s; }
+
+/* boîtier */
+.rad {
+  --couleur: var(--textColorAccent);
+  --frequence: 100;
+  --min: 87;
+  --max: 108;
+  --p: clamp(0, calc((var(--frequence) - var(--min)) / (var(--max) - var(--min))), 1);
+  --coin: 12px;
+  --ant: 300px;
+  --ang: -70deg;
+  counter-reset:
+    ent round(down, var(--frequence), 1)
+    dec round(nearest, calc((var(--frequence) - round(down, var(--frequence), 1)) * 100), 1);
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  isolation: isolate;
+  max-width: 500px;
+  margin: calc(var(--ant) * cos(var(--ang)) + 6px) auto 12px;
+  padding: 14px;
+  font-family: 'Geist Mono', monospace;
+  color: var(--textColor);
+}
+
+.rad::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: var(--couleur);
+  clip-path: polygon(var(--coin) 0, calc(100% - var(--coin)) 0, 100% var(--coin), 100% 100%, 0 100%, 0 var(--coin));
+}
+.rad::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  z-index: 0;
+  background: var(--neutralDarker);
+  clip-path: polygon(calc(var(--coin) - .6px) 0, calc(100% - var(--coin) + .6px) 0, 100% calc(var(--coin) - .6px), 100% 100%, 0 100%, 0 calc(var(--coin) - .6px));
+}
+.rad i { font-style: normal; }
+
+/* antenne */
+.rad .a {
+  position: absolute;
+  bottom: calc(100% - 5px);
+  right: 40px;
+  width: 6px;
+  height: var(--ant);
+  transform-origin: center bottom;
+  transform: rotate(var(--ang));
+  background:
+    linear-gradient(var(--couleur), var(--couleur)) center bottom / 6px calc(var(--ant) * .4) no-repeat,
+    linear-gradient(var(--couleur), var(--couleur)) center bottom calc(var(--ant) * .4) / 4px calc(var(--ant) * .32) no-repeat,
+    linear-gradient(var(--couleur), var(--couleur)) center bottom calc(var(--ant) * .72) / 2px calc(var(--ant) * .28) no-repeat;
+}
+.rad .a::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -1px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--couleur);
+}
+
+/* titre + barres signal */
+.rad .b { order: 1; display: flex; align-items: flex-end; gap: 2px; margin-bottom: 10px; }
+.rad .b::before {
+  content: "RADIO.SYSTEM";
+  margin-right: auto;
+  align-self: center;
+  font: 200 18px/1 'Rakkas', serif;
+    letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--couleur);
+    position: relative;
+    z-index: 1;
+}
+.rad .b i {
+  width: 4px;
+  margin-bottom: 4px;
+  background: var(--couleur);
+  opacity: .2;
+  animation-duration: var(--u, 9s);
+  animation-delay: var(--d, 0s);
+  animation-iteration-count: infinite;
+  animation-timing-function: step-end;
+    position: relative;
+    z-index: 1;
+}
+.rad .b i:nth-child(1) { height: 4px;  animation-name: r1; }
+.rad .b i:nth-child(2) { height: 7px;  animation-name: r2; }
+.rad .b i:nth-child(3) { height: 10px; animation-name: r3; }
+.rad .b i:nth-child(4) { height: 14px; animation-name: r4; }
+@keyframes r1 { 0% { opacity: 1; } 36% { opacity: .2; } 40% { opacity: 1; } }
+@keyframes r2 { 0% { opacity: 1; } 30% { opacity: .2; } 40% { opacity: 1; } 92% { opacity: .2; } }
+@keyframes r3 { 0% { opacity: 1; } 18% { opacity: .2; } 40% { opacity: 1; } 55% { opacity: .2; } 62% { opacity: 1; } 75% { opacity: .2; } 85% { opacity: 1; } 92% { opacity: .2; } }
+@keyframes r4 { 0% { opacity: .2; } 10% { opacity: 1; } 18% { opacity: .2; } 62% { opacity: 1; } 75% { opacity: .2; } }
+@keyframes rb { 50% { opacity: 0; } }
+
+/* écran fréquence */
+.rad .c {
+  order: 2;
+  position: relative;
+  margin-bottom: 10px;
+  padding: 8px 14px;
+  background:
+    repeating-linear-gradient(0deg, rgba(255,255,255,.025) 0 1px, transparent 1px 3px),
+    var(--neutralDark);
+  border: var(--border);
+  border-radius: 5px;
+    z-index: 1;
+}
+
+.rad .e { position: relative; height: 14px; }
+.rad .e i {
+  position: absolute;
+  top: 0;
+  left: calc(var(--k) / 6 * 100%);
+  transform: translateX(-50%);
+  counter-reset: l round(nearest, calc(var(--min) + (var(--max) - var(--min)) * var(--k) / 6), 1);
+  font: 400 8px/1 'Geist Mono', monospace;
+  color: var(--textColor);
+  opacity: .8;
+}
+.rad .e i::before { content: counter(l); }
+.rad .e i:nth-child(1) { --k: 0; }
+.rad .e i:nth-child(2) { --k: 1; }
+.rad .e i:nth-child(3) { --k: 2; }
+.rad .e i:nth-child(4) { --k: 3; }
+.rad .e i:nth-child(5) { --k: 4; }
+.rad .e i:nth-child(6) { --k: 5; }
+.rad .e i:nth-child(7) { --k: 6; }
+
+.rad .r {
+  height: 10px;
+  border-right: 1px solid var(--textColor);
+  background:
+    linear-gradient(90deg, var(--contrastLighter) 1px, transparent 1px) 0 100% / calc(100% / (var(--max) - var(--min))) 5px repeat-x,
+    linear-gradient(90deg, var(--textColor) 1px, transparent 1px) 0 100% / calc(100% / 6) 10px repeat-x;
+}
+
+.rad .n {
+  position: absolute;
+  top: 6px;
+  height: 28px;
+  left: calc(14px + (100% - 28px) * var(--p));
+  width: 2px;
+  margin-left: -1px;
+  background: var(--couleur);
+  box-shadow: 0 0 2px var(--couleur);
+}
+
+.rad .f {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 8px;
+  font-size: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.rad .f::before { content: "fréquence"; opacity: .7; }
+.rad .f::after {
+  content: counter(ent) "." counter(dec, decimal-leading-zero) " mhz";
+  font-weight: 600;
+  font-size: 13px;
+  text-shadow: 0 0 1px;
+  color: var(--couleur);
+}
+
+/* écran message */
+.rad .l {
+  order: 3;
+  padding: 10px 12px;
+  background:
+    repeating-linear-gradient(0deg, rgba(255,255,255,.025) 0 1px, transparent 1px 3px),
+    var(--neutralDark);
+  border: 1px solid var(--couleur);
+  border-radius: 5px;
+  font: 13px/1.6 'Geist Mono', monospace;
+  text-align: justify;
+    z-index: 1;
+}
+
+/* « en ligne » + heure */
+.rad .t {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: var(--border);
+  font: 400 9px 'Geist Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 0 2px;
+  color: var(--couleur);
+}
+.rad .t::before {
+  content: "● transcription en cours";
+  color: var(--colortext);
+  animation: rb 1.2s steps(1) infinite;
+}
+
+/* m : message */
+.rad .m::after {
+  content: "_";
+  margin-left: 2px;
+  animation: rb 1.2s steps(1) infinite;
+}
+
+/* bas */
+.rad .s { order: 4; display: flex; align-items: center; gap: 14px; margin-top: 12px;z-index: 1 }
+
+.rad .k {
+  position: relative;
+  flex: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle closest-side, var(--neutralDarker) 0 40%, transparent 42%),
+    repeating-conic-gradient(var(--neutralDark) 0 12deg, var(--contrastLighter) 12deg 24deg);
+  border: var(--border);
+  transform: rotate(calc(var(--p) * 270deg - 135deg));
+}
+.rad .k::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 50%;
+  width: 3px;
+  height: 9px;
+  margin-left: -1.5px;
+  border-radius: 2px;
+  background: var(--couleur);
+  box-shadow: 0 0 2px var(--couleur);
+}
+
+.rad .g {
+  flex: 1;
+  height: 14px;
+  background: repeating-linear-gradient(90deg, var(--contrastLighter) 0 2px, transparent 2px 6px);
+  opacity: .5;
+}
+
+.rad .x {
+  flex: none;
+  padding: 8px 18px;
+  background: var(--couleur);
+  border-radius: 5px;
+  font: 600 12px 'Geist Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--neutralDarker);
+}
+.rad .x::before { content: "ptt"; }
+
+.rad .z { order: 5; display: flex; align-items: center; gap: 12px; margin-top: 12px; }
+.rad .z::after {
+  content: "";
+  flex: 1;
+  height: 12px;
+  background: repeating-linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--couleur) 35%, transparent) 0 1px,
+    transparent 1px 3px,
+    color-mix(in srgb, var(--couleur) 35%, transparent) 3px 4px,
+    transparent 4px 6px
+  );
+    z-index: 1
+}
+.rad .z::before {
+  content: "maskaaribou";
+  font-size: 10px;
+  font-variant: small-caps;
+  color: var(--textColor);
+  opacity: .25;
+    z-index: 1
+}
+
+/* couleur groupe */
+.post_row:has(.post_pseudo[style*="205, 155, 183"]) .rad,
+.post_row:has(.post_pseudo .group-4) .rad{ --couleur: #cd9bb7; } /* neutre */
+
+.post_row:has(.post_pseudo[style*="248, 99, 145"])  .rad,
+.post_row:has(.post_pseudo .group-5) .rad { --couleur: #f86391; } /* chaotique */
+
+.post_row:has(.post_pseudo[style*="149, 146, 211"]) .rad,
+.post_row:has(.post_pseudo .group-3) .rad { --couleur: #9592d3; } /* loyal */
